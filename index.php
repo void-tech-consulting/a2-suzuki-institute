@@ -2,7 +2,7 @@
   get_header();
   require get_template_directory() . '/inc/section_vars.php';
 ?>
-<h1>On branch dev-test</h1>
+<h1>On julien-dev branch</h1>
 
 
 
