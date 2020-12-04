@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
 /* START Reset */
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Remove default padding */
@@ -37,20 +40,24 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
   list-style: none;
 }
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+
 /* Make images easier to work with */
 img {
   max-width: 100%;
   display: block;
 }
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -62,7 +69,69 @@ select {
 html {
   font-size: 62.5%;
 }
+
 /* END Reset */
 /* 
   Put styles here 
 */
+
+:root {
+  --background-main: #151618;
+
+  /* text */
+  --text-grey-light: #F4F4F4;
+  --text-grey-mid: #E9E9E9;
+  --text-grey-dark: #C9C9C9;
+
+  /* button */
+  --action-main: #4D90F1;
+
+}
+
+#header-container {
+  width: 100%;
+  height: 150px;
+  color: var(--text-grey-light);
+  background-color: var(--background-main);
+}
+
+#header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 40px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
+  background: #36383b;
+  padding: 0 40px;
+}
+
+#header-left {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#header-right>a {
+  color: var(--text-grey-dark);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+#header-right>a:hover {
+  color: var(--text-grey-light);
+}
+
+#header-right>a:visited {
+  color: var(--text-grey-mid);
+}
