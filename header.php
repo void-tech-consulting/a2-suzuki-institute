@@ -22,6 +22,13 @@
     <span id="header-left">Ann Arbor Suzuki Institute</span>
     <div id="header-right">
       <a href="/home">Home</a>
+      <a href="/home">Teachers</a>
+      <a href="/home">Articles</a>
+      <a href="/home">Videos</a>
+      <a href="/home">Events</a>
+      <a href="/home">Contact</a>
+
+
     </div>
   </div>
   
