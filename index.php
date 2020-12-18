@@ -6,7 +6,6 @@
   <div class="page-content-container">
 
   <!-- Buttons -->
-  <button>button 1</button>
 
 
   <!-- About -->
