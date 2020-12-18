@@ -2,13 +2,34 @@
   get_header();
   require get_template_directory() . '/inc/section_vars.php';
 ?>
-<h1>Home</h1>
+<div class="page-container">
+  <div class="page-content-container">
+
+  <!-- Buttons -->
+  <button>button 1</button>
+
+
+  <!-- About -->
+
+
+  <!-- Photo gallery -->
+
+
+  <!-- Testimonial -->
+
+
+  </div>
+</div>
 
 
 
 
 
 
+
+
+
+<!-- Ignore everything below -->
 
 <!-- <?php if (get_theme_mod($home_top_img)) { ?>
   <img 

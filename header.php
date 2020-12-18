@@ -20,14 +20,12 @@
   <!-- Title / Nav -->
   <div id="header-main">
     <span id="header-left">Ann Arbor Suzuki Institute</span>
-    <div id="header-right">
+    <!-- <div id="header-right">
       <a href="/home">Home</a>
-    </div>
-  </div>
-  
-</div>
+      <a href="/example">Example</a>
+    </div> -->
 
-<!-- <div id="menu">
+  <div id="menu">
   <?php  
   $args = array(
     "theme_location" => "primary",
@@ -35,6 +33,10 @@
     "menu_class" => "nav-links"
   );
   wp_nav_menu( $args);
-  ?> -->
+  ?>
+  </div>
+  
+</div>
+
 </div>
   
