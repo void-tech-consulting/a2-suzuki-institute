@@ -22,12 +22,11 @@ require get_template_directory() . '/inc/section_vars.php';
 
       <p class="contact-contact">Contact</p>
       <hr class="contact-horizontal-bar">
-      
-      <label for="name" class="contact-text">Name</label>
-      <br>
-      <input class="contact-input-box" type="text" id="name" name="name" placeholder="    Enter your name">
       </hr>
 
+      <label for="name" class="contact-text">Name</label>
+      <br>
+      <input class="contact-input-box" type="text" id="name" name="name" placeholder="Enter your name">
     </div>
 
   </div>
