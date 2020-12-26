@@ -12,17 +12,21 @@
 
 
   <!-- Photo gallery -->
-  <header>Photo Gallery</header>
+
+  <div class = "photoGalHeader">
+    Photo Gallery
+  </div>
   <div class="photoGalrow">
         <div class="photoGalcolumn">
           <img src= "photos/unnamed-6.jpg">
           <img src= "photos/unnamed-5.jpg"> 
-          <img src="photos/unnamed-4.jpg">
+          
         </div>
         
         <div class="photoGalcolumn">
           <img src="unnamed-2.jpg">
           <img src="unnamed-1.jpg">
+          <img src="photos/unnamed-4.jpg">
         </div>
       </div>
 

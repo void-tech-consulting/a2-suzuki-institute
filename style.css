@@ -151,6 +151,14 @@ html {
   max-width: 1040px;
 }
 
+.photoGalHeader {
+  font-size: 24px;
+  font-weight: 700;
+  color:#36383b;
+  
+
+
+}
 .photoGalrow {
   display: flex;
   flex-wrap: wrap;
