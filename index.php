@@ -1,23 +1,34 @@
-<?php 
-  get_header();
-  require get_template_directory() . '/inc/section_vars.php';
+<?php
+get_header();
+require get_template_directory() . '/inc/section_vars.php';
 ?>
 <div class="page-container">
   <div class="page-content-container">
 
-  <!-- Buttons -->
+    <!-- Buttons -->
 
 
-  <!-- About -->
+    <!-- About -->
 
 
-  <!-- Photo gallery -->
+    <!-- Photo gallery -->
 
 
-  <!-- Testimonial -->
+    <!-- Testimonial -->
 
-  <!-- Contact Page/Form -->
+    <!-- Contact Page/Form -->
 
+    <div class="page-contact-container">
+
+      <p class="contact-contact">Contact</p>
+      <hr class="contact-horizontal-bar">
+      
+      <label for="name" class="contact-text">Name</label>
+      <br>
+      <input class="contact-input-box" type="text" id="name" name="name" placeholder="    Enter your name">
+      </hr>
+
+    </div>
 
   </div>
 </div>

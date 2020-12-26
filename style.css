@@ -1,39 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
-
 /* START Reset */
+
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
 /* Remove default padding */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -42,27 +30,27 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
+
 img {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+
+input, button, textarea, select {
   font: inherit;
 }
 
@@ -71,6 +59,7 @@ html {
 }
 
 /* END Reset */
+
 /* 
   Put styles here 
 */
@@ -78,15 +67,12 @@ html {
 :root {
   --background-main: #151618;
   --background-raised: #1B1C1F;
-
   /* text */
   --text-grey-light: #F4F4F4;
   --text-grey-mid: #E9E9E9;
   --text-grey-dark: #C9C9C9;
-
   /* button */
   --action-main: #4D90F1;
-
 }
 
 #header-container {
@@ -144,9 +130,56 @@ html {
   flex-direction: column;
   align-items: center;
   overflow-x: scroll;
+  background: #151618;
 }
 
 .page-content-container {
   width: 100%;
   max-width: 1040px;
+}
+
+/* Contact Page Styling */
+
+.page-contact-container {
+  margin-top: 20px;
+  font-family: Avenir;
+  color: #F4F4F4;
+}
+
+.contact-contact {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 49px;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.333333px;
+}
+
+.contact-horizontal-bar {
+  left: 14.03%;
+  right: 13.85%;
+  top: 8.55%;
+  bottom: 91.45%;
+  border: 0.5px solid #CCCCCC;
+
+  margin-bottom: 20px;
+}
+
+.page-contact-container input {
+  margin-top: 20px;
+  border-width: 0px;
+  width: 380px;
+  height: 50px;
+  text-align: left;
+  background: #232323;
+}
+
+.page-contact-container input[type="text" i] {
+  font-size: 18px;
+  color: #5B5B5B;
 }
