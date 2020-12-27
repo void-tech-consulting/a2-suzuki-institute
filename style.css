@@ -146,11 +146,25 @@ html {
   color: #F4F4F4;
 }
 
-.contact-contact {
+.contact-contact-text {
   font-size: 36px;
   font-weight: 800;
   line-height: 49px;
   margin-bottom: 20px;
+}
+
+.contact-loveHear-heading-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32.78px;
+  letter-spacing: -0.33px;
+}
+
+.contact-loveHear-normal-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.59px;
+  letter-spacing: -0.33px;
 }
 
 .contact-text {
@@ -166,7 +180,6 @@ html {
   top: 8.55%;
   bottom: 91.45%;
   border: 0.5px solid #CCCCCC;
-
   margin-bottom: 20px;
 }
 
@@ -178,6 +191,9 @@ html {
   text-align: left;
   background: #232323;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .page-contact-container input[type="text" i] {
@@ -186,4 +202,29 @@ html {
   line-height: 24.59px;
   color: #5B5B5B;
   font-family: Lato;
+}
+
+.contact-input-box {
+  margin-bottom: 20px;
+}
+
+.contact-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-fields {
+  width: 50%;
+}
+
+.contact-message-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.contact-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
