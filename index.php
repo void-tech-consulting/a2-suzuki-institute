@@ -2,6 +2,9 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 <div class="page-container">
   <div class="page-content-container">
 
@@ -43,13 +46,15 @@ require get_template_directory() . '/inc/section_vars.php';
         <div class="contact-message-container">
           <div class="contact-message">
             <p class="contact-loveHear-heading-text">We'd love to hear from you!</p>
+            <p class="contact-loveHear-normal-text">Call and leave a message or send an email<br>
+              to schedule lessons and get more information.</p>
+            <p class="contact-loveHear-normal-text">(734) 726-0171<br>annarborsuzuki@gmail.com</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 

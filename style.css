@@ -157,14 +157,16 @@ html {
   font-weight: 800;
   font-size: 36px;
   line-height: 49.18px;
-  letter-spacing: 0.33px;
+  letter-spacing: 0.66px;
+  margin-bottom: 36px;
 }
 
 .contact-loveHear-normal-text {
-  font-weight: 400;
   font-size: 18px;
-  line-height: 24.59px;
-  letter-spacing: -0.33px;
+  line-height: 28px;
+  letter-spacing: 0.33px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 36px;
 }
 
 .contact-text {
@@ -227,4 +229,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
+}
+
+.contact-message-alignment {
+  display: flex;
+  justify-content: center;
 }
