@@ -202,8 +202,12 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 24.59px;
-  color: #5B5B5B;
+  color: #FFFFFF;
   font-family: Lato;
+}
+
+.page-contact-container input::placeholder {
+  color: #5B5B5B;
 }
 
 .contact-input-box {
