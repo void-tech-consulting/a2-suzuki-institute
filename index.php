@@ -6,8 +6,9 @@
   <div class="page-content-container">
 
   <!-- Buttons -->
-
-
+  <div class = "contact_button"> Contact </div>
+  <div class = "teacher_button"> Meet our teachers </div>
+  <div class = "video_button"> See all videos </div> 
   <!-- About -->
 
 

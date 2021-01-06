@@ -150,3 +150,75 @@ html {
   width: 100%;
   max-width: 1040px;
 }
+
+.contact_button {
+  background-color: #4D90F1; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 2px solid #4D90F1;
+  color: white;
+  border-radius: 6px;
+  width: 200px;
+  height: 40px; 
+  padding: 5px 24px;
+  text-align: center;
+  margin: auto; 
+  font-size: 16px;
+  transition-duration: 0.4s;
+  
+}
+
+.contact_button:hover {
+  background-color: white;
+  color: #4D90F1;
+
+}
+
+.teacher_button {
+  border: 1px solid #4D90F1;
+  color: #4D90F1;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 230px;
+  height: 40px; 
+  padding: 5px 24px;
+  text-align: center;
+  margin: auto; 
+  font-size: 16px;
+  transition-duration: 0.4s;
+  position: absolute; 
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.teacher_button:hover {
+  background-color: #4D90F1; 
+  color: white;
+
+}
+
+.video_button {
+  border: 1px solid #4D90F1;
+  color: #4D90F1;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 264.29px;
+  height: 40px; 
+  padding: 5px 24px;
+  text-align: center;
+  margin: auto; 
+  font-size: 16px;
+  transition-duration: 0.4s;
+  position: absolute; 
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.video_button:hover {
+  background-color: #4D90F1; 
+  color: white;
+
+}
