@@ -150,3 +150,58 @@ html {
   width: 100%;
   max-width: 1040px;
 }
+
+.header {
+  text-align: center;
+  color: white;
+  background-color: gray;
+  font-weight: 700;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.writing {
+  margin: 3rem .5rem 3rem 3rem;
+  color: white;
+  background-color: gray;
+  padding: 2rem;
+  overflow-wrap: break-word;
+  border-radius: 1rem;
+  font-weight: 400;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.parent {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  padding: 1rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
+
+.footerlinks {
+  display: flex;
+  justify-content: left;
+}
+
+.PhoneNumber {
+  margin-right: 2rem;
+}
