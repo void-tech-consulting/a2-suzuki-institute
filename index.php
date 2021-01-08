@@ -24,7 +24,7 @@ require get_template_directory() . '/inc/section_vars.php';
     <div class="page-contact-container">
 
       <p class="contact-contact-text">Contact</p>
-      <hr class="contact-horizontal-bar">
+      <hr>
       </hr>
 
       <div class="contact-boxes">
@@ -44,12 +44,12 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
 
         <div class="contact-message-container">
-          <div class="contact-message">
-            <p class="contact-loveHear-heading-text">We'd love to hear from you!</p>
-            <p class="contact-loveHear-normal-text">Call and leave a message or send an email<br>
-              to schedule lessons and get more information.</p>
-            <p class="contact-loveHear-normal-text">(734) 726-0171<br>annarborsuzuki@gmail.com</p>
-          </div>
+          <h2>We'd love to hear from you!</h2>
+          <p style="text-align: center; width: 72%">Call and leave a message or send an email
+            to schedule lessons and get more information.</p>
+          <br>
+          <p style="text-align: center">(734) 726-0171</p>
+          <p style="text-align: center">annarborsuzuki@gmail.com</p>
         </div>
       </div>
     </div>
