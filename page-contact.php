@@ -22,6 +22,7 @@
                 <br>
                 <input class="contact-input-box" style="height: 200px; padding-top: 10px; padding-right: 143px; padding-bottom: 154px" type="text" id="message" name="message" placeholder="Enter a message">
                 <br>
+                <button>Send</button>
             </div>
 
             <div class="contact-message-container">
@@ -33,5 +34,4 @@
             </div>
         </div>
     </div>
-    
 </div>

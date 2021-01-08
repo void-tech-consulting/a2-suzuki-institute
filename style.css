@@ -6,7 +6,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  color: white;
+  color: rgb(220,220,220);
 }
 
 /* Remove default padding */
