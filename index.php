@@ -8,15 +8,15 @@ require get_template_directory() . '/inc/section_vars.php';
 <div class="page-container">
   <div class="page-content-container">
 
-    <!-- Buttons -->
-
-
     <!-- About -->
 
 
     <!-- Photo gallery -->
-
-
+    
+  <!-- Buttons -->
+  <button> button </button>
+  <button class = "btn-outline">btn</button>
+  
     <!-- Testimonial -->
 
     <!-- Contact Page/Form -->
