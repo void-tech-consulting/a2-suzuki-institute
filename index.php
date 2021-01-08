@@ -44,7 +44,7 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
 
         <div class="contact-message-container">
-          <h2>We'd love to hear from you!</h2>
+          <h2 style="text-align: center">We'd love to hear from you!</h2>
           <p style="text-align: center; width: 72%">Call and leave a message or send an email
             to schedule lessons and get more information.</p>
           <br>
