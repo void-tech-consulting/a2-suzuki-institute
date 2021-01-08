@@ -6,8 +6,9 @@
   <div class="page-content-container">
 
   <!-- Buttons -->
-
-
+  <button> button </button>
+  <button class = "btn-outline">btn</button>
+  
   <!-- About -->
 
 
