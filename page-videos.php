@@ -1,4 +1,4 @@
-<?php /* Template Name: contact */ ?>
+<?php /* Template Name: videos */ ?>
 <?php
 get_header();
 ?>
