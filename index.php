@@ -12,23 +12,16 @@
 
 
   <!-- Photo gallery -->
-
-  <div class = "photoGalHeader">
+  <div class = "photo-gal-header">
     Photo Gallery
   </div>
-  <div class="photoGalrow">
-        <div class="photoGalcolumn">
-          <img src= "photos/unnamed-6.jpg">
-          <img src= "photos/unnamed-5.jpg"> 
-          
-        </div>
-        
-        <div class="photoGalcolumn">
-          <img src="unnamed-2.jpg">
-          <img src="unnamed-1.jpg">
-          <img src="photos/unnamed-4.jpg">
-        </div>
-      </div>
+  <div class="photo-gallery-container">
+      <img src= "photos/unnamed-6.jpg">
+      <img src= "photos/unnamed-5.jpg"> 
+      <img src="unnamed-2.jpg">
+      <img src="unnamed-1.jpg">
+      <img src="photos/unnamed-4.jpg">   
+  </div>
 
   <!-- Testimonial -->
 
