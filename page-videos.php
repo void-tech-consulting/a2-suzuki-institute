@@ -1,8 +1,5 @@
 <?php /* Template Name: videos */ ?>
-<?php
-get_header();
-?>
-
+<?php get_header(); ?>
 <div class="page-container">
     <div class="page-content-container">
         <p class="page-header-text">Videos</p>

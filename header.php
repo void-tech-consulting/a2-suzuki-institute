@@ -19,23 +19,17 @@
 
   <!-- Title / Nav -->
   <div id="header-main">
-    <span id="header-left">Ann Arbor Suzuki Institute</span>
-    <!-- <div id="header-right">
-      <a href="/home">Home</a>
-      <a href="/example">Example</a>
-    </div> -->
-
-  <div id="menu">
-  <?php  
-  $args = array(
-    "theme_location" => "primary",
-    "container" => "ul",
-    "menu_class" => "nav-links"
-  );
-  wp_nav_menu( $args);
-  ?>
+    <span id="header-main-left">Ann Arbor Suzuki Institute</span>
+    <div id="header-main-right">
+    <?php  
+      $args = array(
+        "theme_location" => "primary",
+        "container" => "ul",
+        "menu_class" => "nav-links"
+      );
+      wp_nav_menu( $args);
+    ?>
   </div>
-  
 </div>
 
 </div>
