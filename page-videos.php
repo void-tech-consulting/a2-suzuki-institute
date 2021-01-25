@@ -2,9 +2,8 @@
 <?php get_header(); ?>
 <div class="page-container">
     <div class="page-content-container">
-        <p class="page-header-text">Videos</p>
-        <hr>
-        </hr>
+        <h2>Videos</h2>
+        <hr></hr>
 
         <div class="video-row">
             <div class="video-text">

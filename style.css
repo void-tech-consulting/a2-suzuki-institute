@@ -8,10 +8,11 @@ Version: 1.0
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap');
 
-/* START Reset */
+/*************************************
+  Start reset 
+**************************************/
 
 /* Box sizing rules */
-
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -19,29 +20,24 @@ Version: 1.0
 }
 
 /* Remove default padding */
-
 ul[class], ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-
 body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
 /* Set core body defaults */
-
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   background: var(--background-main);
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-
 ul[class], ol[class] {
   list-style: none;
 }
@@ -53,24 +49,21 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-
 img {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-
 input, button, textarea, select {
   font: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
 /* END Reset */
 
-/* General styles */
+/*************************************
+  General styles 
+**************************************/
 :root {
   --background-main: #151618;
   --background-raised: #232323;
@@ -80,35 +73,41 @@ html {
   --text-grey-dark: #C9C9C9;
   /* button */
   --action-main: #4D90F1;
+  /* links */
+  --link-main: #6FA5F3;
 }
 
 p {
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.4;
 }
 
 h2 {
   font-weight: 800;
   font-size: 36px;
-  margin-bottom: 36px;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-weight: 600;
   font-size: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 hr {
-  left: 14.03%;
-  right: 13.85%;
-  top: 8.55%;
-  bottom: 91.45%;
-  border: 0.5px solid #5B5B5B;
+  border: none;
+  border-top: thin solid #ccc;
   margin-bottom: 20px;
+  width: 100%;
 }
 
-/* Button styles */
+a {
+  color: var(--link-main);
+}
+
+/*************************************
+  Button styles 
+**************************************/
 button {
   display: flex;
   justify-content: center;
@@ -137,7 +136,9 @@ button:hover {
   background: rgba(0, 0, 0, 0);
 }
 
-/* Input styles */
+/*************************************
+  Input styles 
+**************************************/
 input {
   display: flex;
   margin-top: 20px;
@@ -163,7 +164,9 @@ input::placeholder {
   color: #5B5B5B;
 }
 
-/* Header styles */
+/*************************************
+  Header styles 
+**************************************/
 #header-container {
   width: 100%;
   height: 150px;
@@ -203,7 +206,28 @@ input::placeholder {
   font-weight: 700;
 }
 
-/* Navigation menu styles */
+#header-background {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  height: 540px;
+  filter: blur(10px);
+}
+
+#header-background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*************************************
+  Navigation menu styles 
+**************************************/
 #header-main-right ul {
   display: flex;
 }
@@ -224,53 +248,41 @@ input::placeholder {
   margin-left: 20px;
 }
 
-/* Header background */
-#header-background {
-  position: absolute;
-  top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  height: 540px;
-  border: solid thin red;
-  filter: blur(10px);
-}
-
-#header-background img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Page styles */
+/*************************************
+  General page styles 
+**************************************/
 .page-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: scroll;
   background: #151618;
   position: absolute;
   top: 150px;
 }
 
 .page-content-container {
-  padding: 20px;
+  padding: 40px 20px;
   width: 100%;
   max-width: 1040px;
 }
 
-.page-header-text {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 20px;
+.page-section {
+  display: flex;
+  margin-bottom: 40px;
 }
 
-/* Home page styling */
+.page-section-side {
+  width: 100%;
+}
+
+.page-section-side + .page-section-side {
+  margin-left: 40px;
+}
+/*************************************
+  Home page styles 
+**************************************/
 .home-jumbotron-content {
   position: absolute;
   display: flex;
@@ -284,7 +296,22 @@ input::placeholder {
   text-align: center;
 }
 
-/* Contact Page Styling */
+.instrument-list-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.instrument-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+
+/*************************************
+  Contact page styles 
+**************************************/
 .page-contact-container {
   margin-top: 20px;
   color: #F4F4F4;
@@ -318,6 +345,9 @@ input::placeholder {
   width: 50%;
 }
 
+/*************************************
+  Responsive design
+**************************************/
 @media (max-width: 950px) {
   .contact-boxes {
     display: flex;
@@ -335,7 +365,9 @@ input::placeholder {
   }
 }
 
-/* Videos Page Styling */
+/*************************************
+  Videos page styles 
+**************************************/
 .video-row {
   margin-top: 40px;
   display: flex;
@@ -356,7 +388,9 @@ input::placeholder {
   margin-left: 24px;
 }
 
-/* special */
+/*************************************
+  Special styles 
+**************************************/
 .secondary-header-text {
   color: white;
   text-transform: uppercase;
