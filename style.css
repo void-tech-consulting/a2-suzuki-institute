@@ -35,6 +35,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   background: var(--background-main);
+  position: relative;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
