@@ -96,7 +96,7 @@ h3 {
 
 hr {
   border: none;
-  border-top: thin solid #ccc;
+  border-top: thin solid rgb(88, 88, 88);
   margin-bottom: 20px;
   width: 100%;
 }
@@ -165,6 +165,15 @@ input::placeholder {
 }
 
 /*************************************
+  Text styles 
+**************************************/
+.text-thin-main {
+  color: var(--text-grey-light);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/*************************************
   Header styles 
 **************************************/
 #header-container {
@@ -183,9 +192,6 @@ input::placeholder {
   align-items: center;
   height: 40px;
   padding: 0 40px;
-  color: var(--text-grey-light);
-  font-weight: 300;
-  font-size: 18px;
   z-index: 20;
   background: var(--background-main);
 }
@@ -246,6 +252,19 @@ input::placeholder {
 
 #header-main-right li + li {
   margin-left: 20px;
+}
+
+/*************************************
+  Footer styles 
+**************************************/
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container * {
 }
 
 /*************************************

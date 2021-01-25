@@ -59,9 +59,8 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Buttons -->
 
     <!-- Testimonial -->
-
+    <?php get_footer(); ?>
   </div>
-  <?php get_footer(); ?>
 </div>
 
 <!-- Ignore everything below -->

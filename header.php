@@ -20,10 +20,12 @@
 
     <!-- Contact Info / Alert message -->
     <div id="header-banner">
-      <span>
+      <span class="text-thin-main">
         <pre>(734) 726-0171    annarborsuzuki@gmail.com</pre>
       </span>
-      <span>Online lessons available!</span>
+      <span class="text-thin-main">
+        Online lessons available!
+      </span>
     </div>
 
     <!-- Title / Nav -->
