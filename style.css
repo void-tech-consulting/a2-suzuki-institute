@@ -13,19 +13,35 @@ Version: 1.0
 **************************************/
 
 /* Box sizing rules */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: var(--text-grey-mid);
 }
 
 /* Remove default padding */
-ul[class], ol[class] {
+ul[class],
+ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
@@ -39,7 +55,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class], ol[class] {
+ul[class],
+ol[class] {
   list-style: none;
 }
 
@@ -56,7 +73,10 @@ img {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -154,7 +174,7 @@ input {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text" i] {
+input[type="text"i] {
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
@@ -177,7 +197,7 @@ input::placeholder {
 /*************************************
   Header styles 
 **************************************/
-#header-container {
+.header-container {
   width: 100%;
   height: 150px;
   background-color: var(--background-main);
@@ -185,7 +205,7 @@ input::placeholder {
   overflow: visible;
 }
 
-#header-banner {
+.header-banner {
   position: absolute;
   width: 100%;
   display: flex;
@@ -197,7 +217,7 @@ input::placeholder {
   background: var(--background-main);
 }
 
-#header-main {
+.header-main {
   position: absolute;
   top: 40px;
   display: flex;
@@ -208,12 +228,14 @@ input::placeholder {
   width: 100%;
 }
 
-#header-main-left {
+.header-main-left {
   font-size: 24px;
   font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
 
-#header-background {
+.header-background {
   position: absolute;
   top: 40px;
   display: flex;
@@ -226,7 +248,7 @@ input::placeholder {
   filter: blur(10px);
 }
 
-#header-background img {
+.header-background img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -235,23 +257,23 @@ input::placeholder {
 /*************************************
   Navigation menu styles 
 **************************************/
-#header-main-right ul {
+.header-main-right ul {
   display: flex;
 }
 
-#header-main-right * {
+.header-main-right * {
   color: var(--text-grey-light);
   text-decoration: none;
   font-size: 16px;
-  font-weight: 300; 
+  font-weight: 300;
   text-transform: uppercase;
 }
 
-#header-main-right *:hover {
+.header-main-right *:hover {
   color: white;
 }
 
-#header-main-right li + li {
+.header-main-right li+li {
   margin-left: 20px;
 }
 
@@ -265,8 +287,7 @@ input::placeholder {
   align-items: center;
 }
 
-.footer-container * {
-}
+.footer-container * {}
 
 /*************************************
   General page styles 
@@ -297,9 +318,10 @@ input::placeholder {
   width: 100%;
 }
 
-.page-section-side + .page-section-side {
+.page-section-side+.page-section-side {
   margin-left: 40px;
 }
+
 /*************************************
   Home page styles 
 **************************************/
@@ -335,7 +357,7 @@ input::placeholder {
 .page-contact-container {
   margin-top: 20px;
   color: #F4F4F4;
-  
+
 }
 
 .contact-text {

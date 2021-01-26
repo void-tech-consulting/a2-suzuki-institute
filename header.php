@@ -1,25 +1,24 @@
-<!-- If you have a navbar or html on the top of every page put it here -->
-<?php wp_head(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ann Arbor Suzuki Institute</title>
+  <title><?php bloginfo('name')?></title>
+  <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <!-- Example navbar -->
-  <div id="header-container">
+  <div class="header-container">
 
     <!-- background image -->
-    <div id="header-background">
+    <div class="header-background">
       <img src="<?php echo get_bloginfo('template_url') ?>/images/jumbotron-background.png" />
     </div>
 
     <!-- Contact Info / Alert message -->
-    <div id="header-banner">
+    <div class="header-banner">
       <span class="text-thin-main">
         <pre>(734) 726-0171    annarborsuzuki@gmail.com</pre>
       </span>
@@ -30,9 +29,9 @@
 
     <!-- Title / Nav -->
     
-    <div id="header-main">
-      <span id="header-main-left">Ann Arbor Suzuki Institute</span>
-      <div id="header-main-right">
+    <div class="header-main">
+      <a class="header-main-left" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+      <div class="header-main-right">
         <?php
         $args = array(
           "theme_location" => "primary",
@@ -43,7 +42,4 @@
         ?>
       </div>
     </div>
-
-
-
   </div>
