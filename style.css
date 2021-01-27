@@ -39,6 +39,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: #151618;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -154,54 +155,53 @@ html {
 .header {
   text-align: center;
   color: white;
-  background-color: gray;
-  font-weight: 700;
+  background-color: #151618;
+  font-weight: 800;
+  font-size: 3.6rem;
 }
 
-.testimonial {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.page-section {
+  display: grid;    
+  gap: 1rem;    
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
-.writing {
-  margin: 3rem .5rem 3rem 3rem;
+.testimonial-box {
+  margin: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   color: white;
-  background-color: gray;
+  background-color: #1B1C1F;
   padding: 2rem;
   overflow-wrap: break-word;
-  border-radius: 1rem;
+  border-radius: .4rem;
   font-weight: 400;
-  min-width: 100px;
-  max-width: 200px;
+  font-size: 1.8rem;
+  height: 36.5rem;
 }
 
-.parent {
+.testimonial-text {
+  margin: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media(max-width: 750px) {
+  .page-section {
+  display: flex;
+  flex-direction: column;
+  }
+}
+.testimonial-parent {
   display: flex;
   justify-content: flex-end;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-right: 3rem;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  position: fixed;
-  padding: 1rem;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: gray;
-  color: white;
-  text-align: center;
-}
-
-.footerlinks {
-  display: flex;
-  justify-content: left;
-}
-
-.PhoneNumber {
-  margin-right: 2rem;
+.quote {
+  width: 5.4rem;
+  height: 4rem;
+  margin: 0 auto;
 }

@@ -18,9 +18,10 @@
   <h1 class= "header"> 
   Testimonials
   </h1>
-<div class = "testimonial"> 
-  <div class= "writing">
-    <p>
+<section class = "page-section"> 
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
     “Lorem ipsum dolor sit amet,
     consectetur adipiscing elit.
     Phasellus euismod semper dolor, a
@@ -29,10 +30,11 @@
     massa commodo, sodales pretium
     tellus. “
     </p>
-    <h1 class= "parent"> -Parent </h1>
+    <h1 class= "testimonial-parent"> -Parent </h1>
   </div>
-  <div class= "writing">
-    <p>
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
     “Lorem ipsum dolor sit amet,
     consectetur adipiscing elit.
     Phasellus euismod semper dolor, a
@@ -41,10 +43,11 @@
     massa commodo, sodales pretium
     tellus. “
     </p>
-    <h1 class= "parent"> -Parent </h1>
+    <h1 class= "testimonial-parent"> -Parent </h1>
   </div>
-  <div class= "writing">
-    <p>
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
     “Lorem ipsum dolor sit amet,
     consectetur adipiscing elit.
     Phasellus euismod semper dolor, a
@@ -53,9 +56,9 @@
     massa commodo, sodales pretium
     tellus. “
     </p>
-    <h1 class= "parent"> -Parent </h1>
+    <h1 class= "testimonial-parent"> -Parent </h1>
   </div>
-</div>
+</section>
 
   </div>
 </div>
