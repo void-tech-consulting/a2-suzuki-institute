@@ -5,6 +5,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php bloginfo('name')?></title>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <?php wp_head(); ?>
 </head>
 
@@ -31,7 +32,9 @@
     
     <div class="header-main">
       <a class="header-main-left" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-      <div class="header-main-right">
+      
+
+      <nav class="site-nav">
         <?php
         $args = array(
           "theme_location" => "primary",
@@ -40,6 +43,6 @@
         );
         wp_nav_menu($args);
         ?>
-      </div>
+      </nav>
     </div>
   </div>
