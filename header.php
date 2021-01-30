@@ -33,7 +33,6 @@
     <div class="header-main">
       <a class="header-main-left" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
       
-
       <nav class="site-nav">
         <?php
         $args = array(

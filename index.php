@@ -3,8 +3,6 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
-  <!-- Photo gallery -->
-
 
 <div class="home-jumbotron-content">
   <span class="secondary-header-text shadow-hard">Excellent Music Instruction</span>
@@ -31,6 +29,7 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
     </div>
 
+    <!-- Instrument list -->
     <div class="instrument-list-container">
       <hr>
       <div class="instrument-list">
@@ -43,6 +42,7 @@ require get_template_directory() . '/inc/section_vars.php';
       <hr>
     </div>
 
+    <!-- Videos preview -->
     <div class="page-section">
       <div class="page-section-side">
         <h2>Learning great technique, musicianship, and character from the start</h2>
@@ -60,51 +60,53 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Buttons -->
 
     <!-- Testimonial -->
-  <h1> 
-  Testimonials
-  </h1>
-<section class = "page-section"> 
-  <div class= "testimonial-box">
-    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
-    <p class= "testimonial-text">
-    “Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Phasellus euismod semper dolor, a
-    hendrerit odio placerat nec. Nunc
-    massa massa, faucibus congue
-    massa commodo, sodales pretium
-    tellus. “
-    </p>
-    <h1 class= "testimonial-parent"> -Parent </h1>
-  </div>
-  <div class= "testimonial-box">
-    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
-    <p class= "testimonial-text">
-    “Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Phasellus euismod semper dolor, a
-    hendrerit odio placerat nec. Nunc
-    massa massa, faucibus congue
-    massa commodo, sodales pretium
-    tellus. “
-    </p>
-    <h1 class= "testimonial-parent"> -Parent </h1>
-  </div>
-  <div class= "testimonial-box">
-    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
-    <p class= "testimonial-text">
-    “Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Phasellus euismod semper dolor, a
-    hendrerit odio placerat nec. Nunc
-    massa massa, faucibus congue
-    massa commodo, sodales pretium
-    tellus. “
-    </p>
-    <h1 class= "testimonial-parent"> -Parent </h1>
-  </div>
-</section>
-    
+
+    <div class="page-section-v">
+      <h2>
+        Testimonials
+      </h2>
+      <div class="testimonials-container">
+        <div class="testimonial-container">
+          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
+          <p class="testimonial-text">
+            “Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Phasellus euismod semper dolor, a
+            hendrerit odio placerat nec. Nunc
+            massa massa, faucibus congue
+            massa commodo, sodales pretium
+            tellus. “
+          </p>
+          <p class="testimonial-parent"> -Parent </p>
+        </div>
+        <div class="testimonial-container">
+          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
+          <p class="testimonial-text">
+            “Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Phasellus euismod semper dolor, a
+            hendrerit odio placerat nec. Nunc
+            massa massa, faucibus congue
+            massa commodo, sodales pretium
+            tellus. “
+          </p>
+          <p class="testimonial-parent"> -Parent </p>
+        </div>
+        <div class="testimonial-container">
+          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
+          <p class="testimonial-text">
+            “Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Phasellus euismod semper dolor, a
+            hendrerit odio placerat nec. Nunc
+            massa massa, faucibus congue
+            massa commodo, sodales pretium
+            tellus. “
+          </p>
+          <p class="testimonial-parent"> -Parent </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
