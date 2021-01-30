@@ -2,8 +2,6 @@
 get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 <div class="home-jumbotron-content">
   <span class="secondary-header-text shadow-hard">Excellent Music Instruction</span>
@@ -14,7 +12,7 @@ require get_template_directory() . '/inc/section_vars.php';
   <div class="vertical-spacer"></div>
 </div>
 
-<div class="page-container" style="top: 580px">
+<div class="page-container">
   <div class="page-content-container">
 
     <!-- About -->
@@ -59,7 +57,8 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Buttons -->
 
     <!-- Testimonial -->
-    <?php get_footer(); ?>
+    
   </div>
 </div>
 
+<?php get_footer(); ?>
