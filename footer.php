@@ -1,7 +1,5 @@
-<div class="footer-container">
-    <div class="page-content-container">
-        <hr>
-        <div class="footer-information">
+
+        <div class="footer-container">
             <div class="footer-left">
                 <a href="https://www.facebook.com">
                     <ion-icon name="logo-facebook" size="large"></ion-icon>
@@ -10,8 +8,7 @@
                 <p class="text-thin-main">annarborsuzuki@gmail.com</p>
             </div>
             <p class="text-thin-main"><?php bloginfo('name'); ?> - &copy; <?php echo date('Y') ?></p>
-        </div>
-        
+        </div>   
     </div>
 </div>
 

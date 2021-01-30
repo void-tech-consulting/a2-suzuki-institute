@@ -285,19 +285,13 @@ input::placeholder {
   Footer styles 
 **************************************/
 .footer-container {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer-information {
+  border: none;
+  border-top: thin solid rgb(88, 88, 88);
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 40px 0;
 }
 
 .footer-left {
@@ -323,9 +317,16 @@ input::placeholder {
 }
 
 .page-content-container {
-  padding: 40px 20px;
+  padding: 0 20px;
   width: 100%;
   max-width: 1040px;
+}
+
+.page-header-text {
+  padding: 20px 0;
+  border: none;
+  border-bottom: thin solid rgb(88, 88, 88);
+  width: 100%; 
 }
 
 .testimonial-box {
@@ -354,14 +355,21 @@ input::placeholder {
 }
 
 .page-section {
+  padding-top: 40px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
-.page-section-v {
-  display: flex; 
+.page-section + .page-section {
+  border: none;
+  border-top: thin solid rgb(88, 88, 88);
+  width: 100%; 
+}
+
+.vertical-stack {
   flex-direction: column;
-  margin-bottom: 40px;
 }
 
 .page-section-side {
@@ -388,17 +396,11 @@ input::placeholder {
   text-align: center;
 }
 
-.instrument-list-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-}
-
 .instrument-list {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 80px;
+  width: 100%;
 }
 
 /*************************************
@@ -406,7 +408,7 @@ input::placeholder {
 **************************************/
 
 .testimonials-container {
-  display: flex
+  display: flex;
 }
 
 .testimonial-container {
@@ -437,12 +439,6 @@ input::placeholder {
 /*************************************
   Contact page styles 
 **************************************/
-.page-contact-container {
-  margin-top: 20px;
-  color: #F4F4F4;
-
-}
-
 .contact-text {
   font-weight: 800;
   font-size: 18px;
@@ -474,8 +470,11 @@ input::placeholder {
   Videos page styles 
 **************************************/
 .video-row {
-  margin-top: 40px;
   display: flex;
+}
+
+.video-row + .video-row {
+  margin-top: 40px;
 }
 
 .video-text {

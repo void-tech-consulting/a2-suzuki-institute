@@ -3,7 +3,6 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
-
 <div class="home-jumbotron-content">
   <span class="secondary-header-text shadow-hard">Excellent Music Instruction</span>
   <p class="shadow-hard">Serving the Ann Arbor, Michigan area for over 45 years</p>
@@ -30,16 +29,14 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 
     <!-- Instrument list -->
-    <div class="instrument-list-container">
-      <hr>
-      <div class="instrument-list">
-        <p>Violin</p>
-        <p>Viola</p>
-        <p>Cello</p>
-        <p>Bass</p>
-        <p>Guitar</p>
-      </div>
-      <hr>
+    <div class="page-section">
+        <div class="instrument-list">
+          <p>Violin</p>
+          <p>Viola</p>
+          <p>Cello</p>
+          <p>Bass</p>
+          <p>Guitar</p>
+        </div>
     </div>
 
     <!-- Videos preview -->
@@ -61,7 +58,7 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- Testimonial -->
 
-    <div class="page-section-v">
+    <div class="page-section vertical-stack">
       <h2>
         Testimonials
       </h2>
@@ -107,7 +104,5 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 <?php get_footer(); ?>

@@ -5,10 +5,9 @@
 
 <div class="page-container">
     <div class="page-content-container">
-        <h2>Contact</h2>
-        <hr></hr>
+        <h2 class="page-header-text">Contact</h2>
 
-        <div class="contact-boxes">
+        <div class="page-section">
             <div class="contact-fields">
                 <label for="name" class="contact-text">Name</label>
                 <br>
@@ -33,8 +32,6 @@
                 <p style="text-align: center">annarborsuzuki@gmail.com</p>
             </div>
         </div>
-    </div>
-</div>
 
 <?php 
   get_footer(); 
