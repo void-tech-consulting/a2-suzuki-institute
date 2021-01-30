@@ -1,12 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+/*
+Theme Name: Ann Arbor Suzuki Institute
+Author: VOID Tech Consulting
+Description: This theme was custom made to be used for the Ann Arbor Suzuki Institute's website.
+Version: 1.0
+*/
 
-/* START Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap');
+
+/*************************************
+  Start reset 
+**************************************/
+
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  color: var(--text-grey-mid);
 }
 
 /* Remove default padding */
@@ -38,8 +50,8 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background-color: #151618;
+  background: var(--background-main);
+  position: relative;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -49,6 +61,7 @@ ol[class] {
 }
 
 /* A elements that don't have a class get default styles */
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -67,87 +80,250 @@ select {
   font: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 /* END Reset */
-/* 
-  Put styles here 
-*/
 
+/*************************************
+  General styles 
+**************************************/
 :root {
   --background-main: #151618;
-  --background-raised: #1B1C1F;
-
+  --background-raised: #232323;
   /* text */
   --text-grey-light: #F4F4F4;
   --text-grey-mid: #E9E9E9;
   --text-grey-dark: #C9C9C9;
-
   /* button */
   --action-main: #4D90F1;
-
+  /* links */
+  --link-main: #6FA5F3;
 }
 
-#header-container {
+p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: thin solid rgb(88, 88, 88);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+a {
+  color: var(--link-main);
+}
+
+/*************************************
+  Button styles 
+**************************************/
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4D90F1;
+  border: 1px solid #4D90F1;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 6px;
+  min-width: 230px;
+  height: 40px;
+  padding: 0px 24px;
+  text-align: center;
+  font-size: 16px;
+  transition-duration: 0.15s;
+}
+
+button:hover {
+  transform: translateY(-.2rem);
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid #4D90F1;
+  color: #4D90F1;
+  background: rgba(0, 0, 0, 0);
+}
+
+/*************************************
+  Input styles 
+**************************************/
+input {
+  display: flex;
+  margin-top: 20px;
+  border-width: 0px;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  background: var(--background-raised);
+  padding-left: 20px;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"i] {
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-family: Lato;
+}
+
+input::placeholder {
+  color: #5B5B5B;
+}
+
+/*************************************
+  Text styles 
+**************************************/
+.text-thin-main {
+  color: var(--text-grey-light);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/*************************************
+  Header styles 
+**************************************/
+.header-container {
   width: 100%;
   height: 150px;
-  color: var(--text-grey-light);
   background-color: var(--background-main);
+  position: relative;
+  overflow: visible;
 }
 
-#header-banner {
+.header-banner {
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
   padding: 0 40px;
-  font-weight: 300;
-  font-size: 18px;
+  z-index: 20;
+  background: var(--background-main);
 }
 
-#header-main {
+.header-main {
+  position: absolute;
+  top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 110px;
-  background: #36383b;
   padding: 0 40px;
+  width: 100%;
 }
 
-#header-left {
+.header-main-left {
   font-size: 24px;
   font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
 
-#header-right>a {
+.header-background {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  height: 540px;
+  filter: blur(10px);
+}
+
+.header-background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*************************************
+  Navigation menu styles 
+**************************************/
+.site-nav ul {
+  display: flex;
+}
+
+.site-nav * {
   color: var(--text-grey-dark);
+  text-decoration: none;
   font-size: 16px;
   font-weight: 300;
-  text-decoration: none;
   text-transform: uppercase;
+}
+
+.site-nav *:hover {
+  color: white;
+}
+
+.site-nav li+li {
   margin-left: 20px;
 }
 
-#header-right>a:hover {
-  color: var(--text-grey-light);
+.site-nav li.current-menu-item a {
+  color: white;
 }
 
-#header-right>a:visited {
-  color: var(--text-grey-mid);
+/*************************************
+  Footer styles 
+**************************************/
+.footer-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.footer-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left *+* {
+  margin-left: 20px;
+}
+
+/*************************************
+  General page styles 
+**************************************/
 .page-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: scroll;
+  background: #151618;
+  position: relative;
 }
 
 .page-content-container {
+  padding: 40px 20px;
   width: 100%;
   max-width: 1040px;
 }
@@ -160,12 +336,12 @@ html {
   font-size: 3.6rem;
 }
 
-.page-section {
+/*.page-section {
   display: grid;    
   gap: 1rem;    
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
-
+*/
 .testimonial-box {
   margin: 1rem;
   margin-top: 2rem;
@@ -204,4 +380,144 @@ html {
   width: 5.4rem;
   height: 4rem;
   margin: 0 auto;
+
+.page-section {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.page-section-side {
+  width: 100%;
+}
+
+.page-section-side+.page-section-side {
+  margin-left: 40px;
+}
+
+/*************************************
+  Home page styles 
+**************************************/
+.home-jumbotron-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  width: 100%;
+  height: 430px;
+  padding: 40px;
+  text-align: center;
+}
+
+.instrument-list-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.instrument-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+
+/*************************************
+  Contact page styles 
+**************************************/
+.page-contact-container {
+  margin-top: 20px;
+  color: #F4F4F4;
+
+}
+
+.contact-text {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.contact-input-box {
+  margin-bottom: 20px;
+}
+
+.contact-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-fields {
+  max-width: 500px;
+  width: 50%;
+}
+
+.contact-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-width: 500px; */
+  width: 50%;
+}
+
+/*************************************
+  Responsive design
+**************************************/
+@media (max-width: 950px) {
+  .contact-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contact-fields {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-message-container {
+    width: 100%;
+  }
+}
+
+/*************************************
+  Videos page styles 
+**************************************/
+.video-row {
+  margin-top: 40px;
+  display: flex;
+}
+
+.video-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-right: 24px;
+}
+
+.video-thumbnail {
+  /*Not sure if this is just a thumbnail or an embedded video */
+  display: flex;
+  width: 50%;
+  margin-left: 24px;
+}
+
+/*************************************
+  Special styles 
+**************************************/
+.secondary-header-text {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
+  font-size: 54px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+
+.vertical-spacer {
+  height: 40px;
+}
+
+.shadow-hard {
+  text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .25);
 }
