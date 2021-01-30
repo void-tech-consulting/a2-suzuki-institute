@@ -5,7 +5,7 @@
 
 <div class="page-container">
     <div class="page-content-container">
-        <p class="page-header-text">Contact</p>
+        <h2>Contact</h2>
         <hr></hr>
 
         <div class="contact-boxes">
@@ -35,3 +35,7 @@
         </div>
     </div>
 </div>
+
+<?php 
+  get_footer(); 
+?>
