@@ -257,24 +257,28 @@ input::placeholder {
 /*************************************
   Navigation menu styles 
 **************************************/
-.header-main-right ul {
+.site-nav ul {
   display: flex;
 }
 
-.header-main-right * {
-  color: var(--text-grey-light);
+.site-nav * {
+  color: var(--text-grey-dark);
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.header-main-right *:hover {
+.site-nav *:hover {
   color: white;
 }
 
-.header-main-right li+li {
+.site-nav li+li {
   margin-left: 20px;
+}
+
+.site-nav li.current-menu-item a {
+  color: white;
 }
 
 /*************************************
@@ -282,12 +286,28 @@ input::placeholder {
 **************************************/
 .footer-container {
   width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-information {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
-.footer-container * {}
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left *+* {
+  margin-left: 20px;
+}
 
 /*************************************
   General page styles 
@@ -299,8 +319,7 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   background: #151618;
-  position: absolute;
-  top: 150px;
+  position: relative;
 }
 
 .page-content-container {
@@ -326,7 +345,7 @@ input::placeholder {
   Home page styles 
 **************************************/
 .home-jumbotron-content {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
