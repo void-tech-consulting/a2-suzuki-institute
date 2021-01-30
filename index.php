@@ -3,6 +3,9 @@ get_header();
 require get_template_directory() . '/inc/section_vars.php';
 ?>
 
+  <!-- Photo gallery -->
+
+
 <div class="home-jumbotron-content">
   <span class="secondary-header-text shadow-hard">Excellent Music Instruction</span>
   <p class="shadow-hard">Serving the Ann Arbor, Michigan area for over 45 years</p>
@@ -57,6 +60,50 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Buttons -->
 
     <!-- Testimonial -->
+  <h1> 
+  Testimonials
+  </h1>
+<section class = "page-section"> 
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
+    “Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit.
+    Phasellus euismod semper dolor, a
+    hendrerit odio placerat nec. Nunc
+    massa massa, faucibus congue
+    massa commodo, sodales pretium
+    tellus. “
+    </p>
+    <h1 class= "testimonial-parent"> -Parent </h1>
+  </div>
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
+    “Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit.
+    Phasellus euismod semper dolor, a
+    hendrerit odio placerat nec. Nunc
+    massa massa, faucibus congue
+    massa commodo, sodales pretium
+    tellus. “
+    </p>
+    <h1 class= "testimonial-parent"> -Parent </h1>
+  </div>
+  <div class= "testimonial-box">
+    <img class="quote" src="<?php echo get_template_directory_uri();?>/quote.png" alt="Quote">
+    <p class= "testimonial-text">
+    “Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit.
+    Phasellus euismod semper dolor, a
+    hendrerit odio placerat nec. Nunc
+    massa massa, faucibus congue
+    massa commodo, sodales pretium
+    tellus. “
+    </p>
+    <h1 class= "testimonial-parent"> -Parent </h1>
+  </div>
+</section>
     
   </div>
 </div>
