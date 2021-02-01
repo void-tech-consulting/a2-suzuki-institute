@@ -30,13 +30,13 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- Instrument list -->
     <div class="page-section">
-        <div class="instrument-list">
-          <p>Violin</p>
-          <p>Viola</p>
-          <p>Cello</p>
-          <p>Bass</p>
-          <p>Guitar</p>
-        </div>
+      <div class="instrument-list">
+        <p>Violin</p>
+        <p>Viola</p>
+        <p>Cello</p>
+        <p>Bass</p>
+        <p>Guitar</p>
+      </div>
     </div>
 
     <!-- Videos preview -->
@@ -105,4 +105,38 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
     </div>
 
-<?php get_footer(); ?>
+
+    <div>
+      <?php
+      require 'inc/section_vars.php';
+      // get_example_data is in /inc/template_functions.php
+      $data  = get_example_data($example_repeater);
+      if (!empty($data)) {
+      ?>
+        <section class="example">
+          <?php
+          foreach ($data as $k => $f) {
+            // Make sure to use a semicolon; when using php on multiple lines
+            $questionId = 'question' . $k;
+            $answerContent = "<div id=\"" . $questionId . "\" class=\"answer-text\">";
+          ?>
+            <div class="questionbox" <?php echo "data-question-id=\"" . $k . "\"" ?>>
+              <span class="question-text"><?php echo $f['question'] ?> </span>
+            </div>
+            <div class="dropdown-line"></div>
+            <?php echo $answerContent ?>
+            <a href="<?php echo $f['link']; ?>">
+              <div class="answer-wrap">
+                <?php echo $f['answer']; ?>
+              </div>
+            </a>
+    </div>
+  <?php
+          }
+  ?>
+  </section>
+<?php } ?>
+
+  </div>
+
+  <?php get_footer(); ?>
