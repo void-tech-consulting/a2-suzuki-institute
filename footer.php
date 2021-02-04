@@ -1,14 +1,12 @@
-
-        <div class="footer-container">
-            <div class="footer-left">
-                <a href="https://www.facebook.com">
-                    <ion-icon name="logo-facebook" size="large"></ion-icon>
-                </a>
-                <p class="text-thin-main">(734) 726-0171</p>
-                <p class="text-thin-main">annarborsuzuki@gmail.com</p>
-            </div>
-            <p class="text-thin-main"><?php bloginfo('name'); ?> - &copy; <?php echo date('Y') ?></p>
-        </div>   
+<div class="footer-container">
+        <a href="https://www.facebook.com">
+            <ion-icon name="logo-facebook" size="large"></ion-icon>
+        </a>
+        <div class="footer-section">
+            <p class="text-thin-main">(734) 726-0171</p>
+            <p class="text-thin-main">annarborsuzuki@gmail.com</p>
+        </div>
+    </div>
     </div>
 </div>
 
@@ -17,4 +15,3 @@
 </body>
 
 </html>
-
