@@ -59,11 +59,12 @@ require get_template_directory() . '/inc/section_vars.php';
         Photo Gallery
       </h2>
       <div class="photo-gallery-container">
-        <img src= "photos/unnamed-6.jpg">
-        <img src= "photos/unnamed-5.jpg"> 
-        <img src="unnamed-2.jpg">
-        <img src="unnamed-1.jpg">
-        <img src="photos/unnamed-4.jpg">   
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-1.jpg"> 
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-2.jpg"> 
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-3.jpg"> 
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-4.jpg"> 
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-5.jpg"> 
+        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-6.jpg"> 
       </div>
     </div>
     

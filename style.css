@@ -378,15 +378,19 @@ input::placeholder {
   width: 100%;
 }
 
-.photo-gal-header {
-  font-size: 24px;
-  font-weight: 700;
-  color:#36383b;
-}
 .photo-gallery-container {
+  margin-top: 20px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1 fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.photo-gallery-container img {
+  object-fit: cover;
+  background: red;
+  height: 100%;
+  width: 100%;
+  max-height: 280px;
 }
 
 /*************************************
