@@ -53,11 +53,21 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 
     <!-- Photo gallery -->
-
-    <!-- Buttons -->
-
+    <!-- Photo gallery -->
+    <div class="page-section vertical-stack">
+      <h2>
+        Photo Gallery
+      </h2>
+      <div class="photo-gallery-container">
+        <img src= "photos/unnamed-6.jpg">
+        <img src= "photos/unnamed-5.jpg"> 
+        <img src="unnamed-2.jpg">
+        <img src="unnamed-1.jpg">
+        <img src="photos/unnamed-4.jpg">   
+      </div>
+    </div>
+    
     <!-- Testimonial -->
-
     <div class="page-section vertical-stack">
       <h2>
         Testimonials

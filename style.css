@@ -378,6 +378,17 @@ input::placeholder {
   width: 100%;
 }
 
+.photo-gal-header {
+  font-size: 24px;
+  font-weight: 700;
+  color:#36383b;
+}
+.photo-gallery-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1 fr));
+}
+
 /*************************************
   Testimonials styles 
 **************************************/
