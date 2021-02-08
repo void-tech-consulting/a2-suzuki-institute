@@ -4,7 +4,7 @@ require get_template_directory() . '/inc/section_vars.php';
 ?>
 
 <div class="home-jumbotron-content">
-  <span class="secondary-header-text shadow-hard">Excellent Music Instruction</span>
+  <span class="secondary-header-text shadow-hard"><?php echo get_theme_mod($jumbotron_headline) ?></span>
   <p class="shadow-hard">Serving the Ann Arbor, Michigan area for over 45 years</p>
   <div class="vertical-spacer"></div>
   <button>Contact</button>
@@ -53,21 +53,26 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 
     <!-- Photo gallery -->
-    <!-- Photo gallery -->
     <div class="page-section vertical-stack">
       <h2>
         Photo Gallery
       </h2>
-      <div class="photo-gallery-container">
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-1.jpg"> 
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-2.jpg"> 
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-3.jpg"> 
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-4.jpg"> 
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-5.jpg"> 
-        <img src= "<?php echo get_bloginfo('template_url') ?>/images/photog-6.jpg"> 
-      </div>
+      <?php
+      require 'inc/section_vars.php';
+      // get_example_data is in /inc/template_functions.php
+      $data  = get_photogallery_data($photogallery_repeater);
+      if (!empty($data)) {
+      ?>
+        <div class="photo-gallery-container">
+          <?php foreach ($data as $k => $f) { 
+            $media = '<img src="'.esc_url( get_media_url( $f['image'] ) ).'" alt="'. $image_alt .'">';
+            ?>
+            <?php echo $media ?>
+          <?php } ?>
+        </div>
+      <?php } ?>
     </div>
-    
+
     <!-- Testimonial -->
     <div class="page-section vertical-stack">
       <h2>
@@ -115,39 +120,5 @@ require get_template_directory() . '/inc/section_vars.php';
         </div>
       </div>
     </div>
-
-
-    <div>
-      <?php
-      require 'inc/section_vars.php';
-      // get_example_data is in /inc/template_functions.php
-      $data  = get_example_data($example_repeater);
-      if (!empty($data)) {
-      ?>
-        <section class="example">
-          <?php
-          foreach ($data as $k => $f) {
-            // Make sure to use a semicolon; when using php on multiple lines
-            $questionId = 'question' . $k;
-            $answerContent = "<div id=\"" . $questionId . "\" class=\"answer-text\">";
-          ?>
-            <div class="questionbox" <?php echo "data-question-id=\"" . $k . "\"" ?>>
-              <span class="question-text"><?php echo $f['question'] ?> </span>
-            </div>
-            <div class="dropdown-line"></div>
-            <?php echo $answerContent ?>
-            <a href="<?php echo $f['link']; ?>">
-              <div class="answer-wrap">
-                <?php echo $f['answer']; ?>
-              </div>
-            </a>
-    </div>
-  <?php
-          }
-  ?>
-  </section>
-<?php } ?>
-
-  </div>
 
   <?php get_footer(); ?>
