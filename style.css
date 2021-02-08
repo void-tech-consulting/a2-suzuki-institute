@@ -505,6 +505,19 @@ input::placeholder {
     display: flex;
     flex-direction: column;
   }
+
+  .video-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-text {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 24px;
+    align-items: center;
+    text-align: left;
+  }
 }
 
 /* tablet (medium width) */
