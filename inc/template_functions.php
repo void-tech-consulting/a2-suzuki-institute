@@ -142,3 +142,59 @@ if ( ! function_exists( 'get_example_data' ) ) {
 		));
 	}
 }
+
+if (! function_exists( 'get_photogallery_data')) {
+	/**
+	 * Get Photogallery Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_photogallery_data($section) {
+		return template_data($section, array(
+			'label' => '',
+            'image' => ''
+		)); 
+	}
+}
+
+// Get url to media for repeater sections
+if ( ! function_exists( 'get_media_url' ) ) {
+	function get_media_url( $media = array(), $size = 'full' ) {
+		$media = wp_parse_args(
+			$media,
+			array(
+				'url' => '',
+				'id' => '',
+			)
+		);
+		$url = '';
+		if ( $media['id'] != '' ) {
+			if ( strpos( get_post_mime_type( $media['id'] ), 'image' ) !== false ) {
+				$image = wp_get_attachment_image_src( $media['id'], $size );
+				if ( $image ) {
+					$url = $image[0];
+				}
+			} else {
+				$url = wp_get_attachment_url( $media['id'] );
+			}
+		}
+		if ( $url == '' && $media['url'] != '' ) {
+			$id = attachment_url_to_postid( $media['url'] );
+			if ( $id ) {
+				if ( strpos( get_post_mime_type( $id ), 'image' ) !== false ) {
+					$image = wp_get_attachment_image_src( $id, $size );
+					if ( $image ) {
+						$url = $image[0];
+					}
+				} else {
+					$url = wp_get_attachment_url( $id );
+				}
+			} else {
+				$url = $media['url'];
+			}
+		}
+		return $url;
+	}
+}

@@ -387,10 +387,9 @@ input::placeholder {
 
 .photo-gallery-container img {
   object-fit: cover;
-  background: red;
   height: 100%;
   width: 100%;
-  max-height: 280px;
+  height: 280px;
 }
 
 /*************************************
@@ -526,6 +525,15 @@ input::placeholder {
 
   .page-section-side+.page-section-side {
     margin: 20px 0 0 0;
+  }
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
