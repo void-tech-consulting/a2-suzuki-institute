@@ -387,10 +387,9 @@ input::placeholder {
 
 .photo-gallery-container img {
   object-fit: cover;
-  background: red;
   height: 100%;
   width: 100%;
-  max-height: 280px;
+  height: 280px;
 }
 
 /*************************************
