@@ -423,6 +423,12 @@ input::placeholder {
   margin-bottom: 1rem;
 }
 
+@media(max-width: 750px) {
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*************************************
   Contact page styles 
 **************************************/
