@@ -6,7 +6,9 @@
 
   $jumbotron_section = 'jumbotron_section';
   $jumbotron_headline = 'jumbotron_headline';
-  $jumbotron_headline_control = 'jumbotron-headline-control';
+  $jumbotron_headline_control = 'jumbotron_headline_control';
+  $jumbotron_subheading = 'jumbotron_subheading';
+  $jumbotron_subheading_control = 'jumbotron_subheading_control';
 
   $photogallery_section = 'photogallery_section';
   $photogallery_repeater = 'photogallery_repeater';
