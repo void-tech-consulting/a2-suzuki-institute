@@ -17,7 +17,7 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- About -->
     <div class="page-section">
-      <div class="page-section-side">
+      <div class="page-section-side hide-on-tablet-width">
         <img src="<?php echo get_bloginfo('template_url') ?>/images/students-1.jpg" />
       </div>
       <div class="page-section-side">

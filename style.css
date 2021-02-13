@@ -7,45 +7,32 @@ Version: 1.0
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap');
-
 /*************************************
   Start reset 
 **************************************/
 
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: var(--text-grey-mid);
 }
 
 /* Remove default padding */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -55,8 +42,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   list-style: none;
 }
 
@@ -67,16 +54,15 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
+
 img {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+
+input, button, textarea, select {
   font: inherit;
 }
 
@@ -85,6 +71,7 @@ select {
 /*************************************
   General styles 
 **************************************/
+
 :root {
   --background-main: #151618;
   --background-raised: #232323;
@@ -129,6 +116,7 @@ a {
 /*************************************
   Button styles 
 **************************************/
+
 button {
   display: flex;
   justify-content: center;
@@ -160,6 +148,7 @@ button:hover {
 /*************************************
   Input styles 
 **************************************/
+
 input {
   display: flex;
   width: 100%;
@@ -188,6 +177,7 @@ input::placeholder {
 /*************************************
   Text styles 
 **************************************/
+
 .text-thin-main {
   color: var(--text-grey-light);
   font-weight: 300;
@@ -197,6 +187,7 @@ input::placeholder {
 /*************************************
   Header styles 
 **************************************/
+
 .header-container {
   width: 100%;
   height: 150px;
@@ -257,6 +248,7 @@ input::placeholder {
 /*************************************
   Navigation menu styles 
 **************************************/
+
 .site-nav ul {
   display: flex;
 }
@@ -284,6 +276,7 @@ input::placeholder {
 /*************************************
   Footer styles 
 **************************************/
+
 .footer-container {
   border: none;
   border-top: thin solid rgb(88, 88, 88);
@@ -306,6 +299,7 @@ input::placeholder {
 /*************************************
   General page styles 
 **************************************/
+
 .page-container {
   width: 100%;
   height: 100%;
@@ -326,7 +320,7 @@ input::placeholder {
   padding: 20px 0;
   border: none;
   border-bottom: thin solid rgb(88, 88, 88);
-  width: 100%; 
+  width: 100%;
 }
 
 .page-section {
@@ -337,10 +331,10 @@ input::placeholder {
   margin-bottom: 40px;
 }
 
-.page-section + .page-section {
+.page-section+.page-section {
   border: none;
   border-top: thin solid rgb(88, 88, 88);
-  width: 100%; 
+  width: 100%;
 }
 
 .vertical-stack {
@@ -358,6 +352,7 @@ input::placeholder {
 /*************************************
   Home page styles 
 **************************************/
+
 .home-jumbotron-content {
   position: relative;
   display: flex;
@@ -426,6 +421,7 @@ input::placeholder {
 /*************************************
   Contact page styles 
 **************************************/
+
 .contact-text {
   font-weight: 800;
   font-size: 18px;
@@ -456,11 +452,12 @@ input::placeholder {
 /*************************************
   Videos page styles 
 **************************************/
+
 .video-row {
   display: flex;
 }
 
-.video-row + .video-row {
+.video-row+.video-row {
   margin-top: 40px;
 }
 
@@ -510,6 +507,7 @@ input::placeholder {
 **************************************/
 
 /* tablet (large width) */
+
 @media (max-width: 768px) {
   p {
     font-size: 16px;
@@ -517,10 +515,25 @@ input::placeholder {
   .page-section {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
-
+  .page-section-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .page-section-side+.page-section-side {
     margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hide-on-tablet-width {
+    display: none;
+  }
+  .page-section-side button {
+    width: 40%;
   }
   .footer-section {
     display: flex;
@@ -551,13 +564,14 @@ input::placeholder {
     margin-left: 20px;
   
   }
-  
-
 }
+
+@media (max-width: 376px) {}
 
 /*************************************
   Special styles 
 **************************************/
+
 .secondary-header-text {
   color: white;
   text-transform: uppercase;
