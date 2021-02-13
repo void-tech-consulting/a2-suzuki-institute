@@ -478,6 +478,7 @@ input::placeholder {
   width: 50%;
   margin-left: 24px;
 }
+
 /*************************************
  Teachers page styles 
 **************************************/
@@ -498,17 +499,12 @@ input::placeholder {
 
 }
 
-.video-thumbnail {
-  /*Not sure if this is just a thumbnail or an embedded video */
-  display: flex;
-  width: 50%;
-  margin-left: 24px;
-}
 .teacher-profile-pic {
   height: 255px;
   width: 184px;
   object-fit: cover;
 }
+
 /*************************************
   Responsive design
 **************************************/
@@ -539,15 +535,15 @@ input::placeholder {
 
 /* tablet (medium width) */
 @media (max-width: 640px) {
-
-}
-
-/* phone (small width) */
-@media (max-width: 376px) {
   .teacher-profile-pic {
     height: 128px;
     width: 92px;
   }
+}
+
+/* phone (small width) */
+@media (max-width: 376px) {
+  
   .teacher-text {
     display: flex;
     flex-direction: column;
