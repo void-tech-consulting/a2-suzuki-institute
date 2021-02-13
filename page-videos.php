@@ -5,40 +5,37 @@
         <h2 class="page-header-text">Videos</h2>
 
         <div class="page-section vertical-stack">
-            <div class="video-row">
-                <div class="video-text">
-                    <h3>Video Title</h3>
-                    <p>Video description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod semper dolor, a hendrerit odio placerat nec. Nunc massa massa, faucibus congue massa commodo, sodales pretium tellus.</p>
-                </div>
 
-                <div class="video-thumbnail">
-                    <img src="https://i.imgur.com/h0wHByK.png">
-                </div>
-            </div>
+            <?php
+            require 'inc/section_vars.php';
+            // get_example_data is in /inc/template_functions.php
+            $data = get_videos_data($videos_repeater);
+            if (!empty($data)) {
+            ?>
+            <?php foreach ($data as $k => $f) {
+                    echo '<div class="video-row">';
+                    echo '<div class="video-text">';
+                    $video_title = '<h3>' . $f['title'] . '</h3>';
+                    $video_desc = '<p>' . $f['description'] . '</p>';
+                    echo $video_title;
+                    echo $video_desc;
+                    echo '</div>';
 
-            <div class="video-row">
-                <div class="video-text">
-                    <h3>Video Title</h3>
-                    <p>Video description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod semper dolor, a hendrerit odio placerat nec. Nunc massa massa, faucibus congue massa commodo, sodales pretium tellus.</p>
-                </div>
+                    echo '<div class="video-thumbnail">';
+                    $video = '<video width="320" height="240" controls>
+                                        <source src="' . esc_url(get_media_url($f['video'])) .
+                        '" type=video/mp4> </video>';
+                    echo $video;
+                    echo '</div>';
 
-                <div class="video-thumbnail">
-                    <img src="https://i.imgur.com/h0wHByK.png">
-                </div>
-            </div>
+                    echo '</div>';
 
-            <div class="video-row">
-                <div class="video-text">
-                    <h3>Video Title</h3>
-                    <p>Video description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus euismod semper dolor, a hendrerit odio placerat nec. Nunc massa massa, faucibus congue massa commodo, sodales pretium tellus.</p>
-                </div>
-
-                <div class="video-thumbnail">
-                    <img src="https://i.imgur.com/h0wHByK.png">
-                </div>
-            </div>
+                    $media = '<img src="' . esc_url(get_media_url($f['image'])) . '" alt="' . $image_alt . '">';
+                }
+            }
+            ?>
         </div>
 
-<?php 
-  get_footer(); 
-?>
+        <?php
+        get_footer();
+        ?>
