@@ -382,10 +382,9 @@ input::placeholder {
 
 .photo-gallery-container img {
   object-fit: cover;
-  background: red;
   height: 100%;
   width: 100%;
-  max-height: 280px;
+  height: 280px;
 }
 
 /*************************************
@@ -478,6 +477,32 @@ input::placeholder {
 }
 
 /*************************************
+ Teachers page styles 
+**************************************/
+.teacher-row {
+  width: 100%;
+  display: flex;
+}
+
+.teacher-row + .teacher-row {
+  margin-top: 40px;
+}
+
+.teacher-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+
+}
+
+.teacher-profile-pic {
+  height: 255px;
+  width: 184px;
+  object-fit: cover;
+}
+
+/*************************************
   Responsive design
 **************************************/
 
@@ -510,13 +535,36 @@ input::placeholder {
   .page-section-side button {
     width: 40%;
   }
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* tablet (medium width) */
-
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+  .teacher-profile-pic {
+    height: 128px;
+    width: 92px;
+  }
+}
 
 /* phone (small width) */
+@media (max-width: 376px) {
+  
+  .teacher-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  
+  }
+}
 
 @media (max-width: 376px) {}
 

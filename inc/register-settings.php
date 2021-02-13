@@ -1,6 +1,7 @@
 <?php
 
 register_nav_menu( "primary", "Top Navbar" );
+
 function home_customizer($wp_customize) {
   require 'section_vars.php';
   $wp_customize->add_section($home_section, array(
@@ -36,52 +37,94 @@ function home_customizer($wp_customize) {
 }
 add_action( 'customize_register', 'home_customizer' );
 
+// Jumbotron customizer
+function jumbotron_customizer($wp_customize) {
+  require 'section_vars.php';
 
-// Example of how to use a repeatable box
+  $wp_customize->add_section($jumbotron_section, array(
+    'title' => 'Jumbotron',
+  ));
 
-function example_repeatable_customizer($wp_customize) {
+  $wp_customize->add_setting($jumbotron_headline, array(
+    'default' => 'Headline Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $jumbotron_headline_control, array(
+    'label' => 'Headline',
+    'section' => $jumbotron_section,
+    'settings' => $jumbotron_headline
+  )));
+
+  $wp_customize->add_setting($jumbotron_subheading, array(
+    'default' => 'Subheading Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $jumbotron_subheading_control, array(
+    'label' => 'Subheading',
+    'section' => $jumbotron_section,
+    'settings' => $jumbotron_subheading
+  )));
+}
+add_action('customize_register', 'jumbotron_customizer');
+
+// Photogallery
+function photogallery_repeatable_customizer($wp_customize) {
   require 'section_vars.php';  
-  require_once 'controller.php';  
+  require_once 'controller.php';
   
-  $wp_customize->add_section($example_section, array(
-    'title' => 'Example Home Repeaters',
+  // wp_customize lets us add sections to the customize menu
+  // in the dashboard. 
+  //
+  // $wp_customize->add_section() takes two parameters. The first
+  // is the variable name for the section we want to add. The second
+  // is an array with a few additional options
+  $wp_customize->add_section($photogallery_section, array(
+    
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Photo Gallery',
   ));
   
+  // This is where data will be stored in the database for a field
+  //
+  // $wp_customize->add_setting() takes two parameters. The first is
+  // the variable name that we want to call this setting. The second
+  // is an array with more options.
   $wp_customize->add_setting(
-    $example_repeater,
+    $photogallery_repeater,
     array(
         'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
         'transport' => 'refresh',
-    ) );
+    )
+  );
 
+  // This is the text box that users will see and type text into
+  //
+  // $wp_customize->add_control() takes a newly constructed object of some class.
+  // We are interested in WP_Customize_Control and 
+  // Onepress_Customize_Repeatable_Control
   $wp_customize->add_control(
       new Onepress_Customize_Repeatable_Control(
           $wp_customize,
-          $example_repeater,
+          $photogallery_repeater,
           array(
-              'label' 		=> esc_html__('Example Q & A Repeater'),
-              'description'   => '',
-              'section'       => $example_section,
-              'live_title_id' => 'question',
+              'label' 		=> esc_html__('Update photo gallery'),
+              'description'   => 'Add or remove images from the photo gallery on the home page.',
+              'section'       => $photogallery_section,
+              'live_title_id' => 'label',
               'title_format'  => esc_html__('[live_title]'), // [live_title]
-              'max_item'      => 10, // Maximum item can add
+              'max_item'      => 12, // Maximum item can add
               'limited_msg' 	=> wp_kses_post( __( 'Max items added' ) ),
               'fields'    => array(
-                  'question'  => array(
-                      'title' => esc_html__('Question'),
+                  'label'  => array(
+                      'title' => esc_html__('Label'),
                       'type'  =>'text',
                   ),
-                  'answer'  => array(
-                      'title' => esc_html__('Answer'),
-                      'type'  =>'editor',
-                  ),
-                  'link'  => array(
-                      'title' => esc_html__('Link'),
-                      'type'  =>'url',
+                  'image'  => array(
+                      'title' => esc_html__('Image'),
+                      'type'  =>'media',
                   ),
               ),
           )
       )
   );
 }
-add_action( 'customize_register', 'example_repeatable_customizer' );
+add_action( 'customize_register', 'photogallery_repeatable_customizer' );
