@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <?php wp_head(); ?>
 </head>
+<?php require get_template_directory() . '/inc/section_vars.php'; ?>
 
 <body <?php body_class(); ?>>
   <!-- Example navbar -->
@@ -21,10 +22,10 @@
     <!-- Contact Info / Alert message -->
     <div class="header-banner">
       <span class="text-thin-main">
-        <pre>(734) 726-0171    annarborsuzuki@gmail.com</pre>
+        <pre><?php echo get_theme_mod($header_banner_phonenumber) ?>   <?php echo get_theme_mod($header_banner_email) ?></pre>
       </span>
       <span class="text-thin-main">
-        Online lessons available!
+      <?php echo get_theme_mod($header_banner_message) ?>
       </span>
     </div>
 

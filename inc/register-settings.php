@@ -62,8 +62,46 @@ function jumbotron_customizer($wp_customize) {
     'section' => $jumbotron_section,
     'settings' => $jumbotron_subheading
   )));
+
 }
 add_action('customize_register', 'jumbotron_customizer');
+
+function header_banner_customizer($wp_customize) {
+  require 'section_vars.php';
+
+  $wp_customize->add_section($header_banner_section, array(
+    'title' => 'Header Banner',
+  ));
+
+  $wp_customize->add_setting($header_banner_phonenumber, array(
+    'default' => 'Phone Number Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_phonenumber_control, array(
+    'label' => 'Phone Number',
+    'section' => $header_banner_section,
+    'settings' => $header_banner_phonenumber
+  )));
+
+  $wp_customize->add_setting($header_banner_email, array(
+    'default' => 'Email Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_email_control, array(
+    'label' => 'Email',
+    'section' => $header_banner_section,
+    'settings' => $header_banner_email
+  )));
+
+  $wp_customize->add_setting($header_banner_message, array(
+    'default' => 'Message Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_message_control, array(
+    'label' => 'Message',
+    'section' => $header_banner_section,
+    'settings' => $header_banner_message
+  )));
+
+}
+add_action('customize_register', 'header_banner_customizer');
 
 // Photogallery
 function photogallery_repeatable_customizer($wp_customize) {
