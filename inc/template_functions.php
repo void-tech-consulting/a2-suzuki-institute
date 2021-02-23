@@ -159,6 +159,23 @@ if (! function_exists( 'get_photogallery_data')) {
 	}
 }
 
+if (!function_exists('get_videos_data')) {
+	/**
+	 * Get Videos Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_videos_data($section) {
+		return template_data($section, array(
+			'title' => '',
+			'description' => '',
+			'video' => ''
+		));
+	}
+}
+
 // Get url to media for repeater sections
 if ( ! function_exists( 'get_media_url' ) ) {
 	function get_media_url( $media = array(), $size = 'full' ) {

@@ -64,7 +64,7 @@ require get_template_directory() . '/inc/section_vars.php';
       if (!empty($data)) {
       ?>
         <div class="photo-gallery-container">
-          <?php foreach ($data as $k => $f) { 
+          <?php foreach ($data as $k => $f) {
             $media = '<img src="'.esc_url( get_media_url( $f['image'] ) ).'" alt="'. $image_alt .'">';
             ?>
             <?php echo $media ?>
