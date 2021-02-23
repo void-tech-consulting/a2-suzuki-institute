@@ -44,6 +44,7 @@ function jumbotron_customizer($wp_customize) {
   $wp_customize->add_section($jumbotron_section, array(
     'title' => 'Jumbotron',
   ));
+
   $wp_customize->add_setting($jumbotron_headline, array(
     'default' => 'Headline Placeholder'
   ));
@@ -52,12 +53,21 @@ function jumbotron_customizer($wp_customize) {
     'section' => $jumbotron_section,
     'settings' => $jumbotron_headline
   )));
+
+  $wp_customize->add_setting($jumbotron_subheading, array(
+    'default' => 'Subheading Placeholder'
+  ));
+  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $jumbotron_subheading_control, array(
+    'label' => 'Subheading',
+    'section' => $jumbotron_section,
+    'settings' => $jumbotron_subheading
+  )));
 }
 add_action('customize_register', 'jumbotron_customizer');
 
 // Photogallery
 function photogallery_repeatable_customizer($wp_customize) {
-  require 'section_vars.php';
+  require 'section_vars.php';  
   require_once 'controller.php';
 
   // wp_customize lets us add sections to the customize menu
@@ -81,8 +91,8 @@ function photogallery_repeatable_customizer($wp_customize) {
   $wp_customize->add_setting(
     $photogallery_repeater,
     array(
-      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-      'transport' => 'refresh',
+        'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+        'transport' => 'refresh',
     )
   );
 

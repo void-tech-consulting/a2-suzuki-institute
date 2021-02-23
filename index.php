@@ -5,7 +5,7 @@ require get_template_directory() . '/inc/section_vars.php';
 
 <div class="home-jumbotron-content">
   <span class="secondary-header-text shadow-hard"><?php echo get_theme_mod($jumbotron_headline) ?></span>
-  <p class="shadow-hard">Serving the Ann Arbor, Michigan area for over 45 years</p>
+  <p class="shadow-hard"><?php echo get_theme_mod($jumbotron_subheading) ?></p>
   <div class="vertical-spacer"></div>
   <button>Contact</button>
   <div class="vertical-spacer"></div>
@@ -17,7 +17,7 @@ require get_template_directory() . '/inc/section_vars.php';
 
     <!-- About -->
     <div class="page-section">
-      <div class="page-section-side">
+      <div class="page-section-side hide-on-tablet-width">
         <img src="<?php echo get_bloginfo('template_url') ?>/images/students-1.jpg" />
       </div>
       <div class="page-section-side">
