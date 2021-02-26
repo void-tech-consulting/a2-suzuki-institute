@@ -31,11 +31,17 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Instrument list -->
     <div class="page-section">
       <div class="instrument-list">
-        <p>Violin</p>
-        <p>Viola</p>
-        <p>Cello</p>
-        <p>Bass</p>
-        <p>Guitar</p>
+        <?php
+        require 'inc/section_vars.php';
+        $data = get_instrument_data($instrument_repeater);
+        if (!empty($data)) {
+          foreach ($data as $k => $f) {
+        ?> 
+        <p>
+          <?php echo $f['instrument'] ?>
+        </p>
+        <?php } ?>
+        <?php } ?>
       </div>
     </div>
 

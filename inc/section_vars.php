@@ -13,6 +13,9 @@
   $photogallery_section = 'photogallery_section';
   $photogallery_repeater = 'photogallery_repeater';
 
+  $instrument_section = 'instrument_section';
+  $instrument_repeater = 'instrument_repeater';
+
   $videos_section = 'videos_section';
   $videos_repeater = 'videos_repeater';
 ?>

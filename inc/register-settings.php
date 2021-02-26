@@ -129,6 +129,44 @@ function photogallery_repeatable_customizer($wp_customize) {
 }
 add_action('customize_register', 'photogallery_repeatable_customizer');
 
+
+function instrument_names($wp_customize) {
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($instrument_section, array (
+    'title' => 'Instruments being Teached'
+  ));
+  
+  $wp_customize->add_setting($instrument_repeater, array (
+    'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $instrument_repeater,
+      array(
+        'label'     => esc_html__('Add Instruments Taught'),
+        'description'   => 'Add or remove instruments from the home page',
+        'section'       => $instrument_section,
+        'live_title_id' => 'title',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 10, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'instrument'  => array(
+            'title' => esc_html__('Instrument Name'),
+            'type'  => 'text',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'instrument_names');
+
 function videos_repeatable_customizer($wp_customize) {
   require 'section_vars.php';
   require_once 'controller.php';
