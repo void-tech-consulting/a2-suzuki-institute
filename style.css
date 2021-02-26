@@ -335,6 +335,10 @@ input::placeholder {
   width: 100%; 
 }
 
+h2.page-header-text {
+  margin-bottom: 0;
+}
+
 .page-section {
   padding-top: 40px;
   display: flex;
@@ -559,8 +563,9 @@ input::placeholder {
     margin-bottom: 24px;
     align-items: center;
     text-align: left;
+  }
 
-   .hide-on-tablet-width {
+  .hide-on-tablet-width {
       display: none;
   }
 }
