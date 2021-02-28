@@ -159,6 +159,21 @@ if (! function_exists( 'get_photogallery_data')) {
 	}
 }
 
+if (! function_exists( 'get_instrument_data')) {
+	/**
+	 * Get Instrument Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_instrument_data($section) {
+		return template_data($section, array(
+			'instrument' => ''
+		)); 
+	}
+}
+
 if (!function_exists('get_videos_data')) {
 	/**
 	 * Get Videos Data
