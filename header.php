@@ -22,10 +22,16 @@
 
     <!-- Contact Info / Alert message -->
     <div class="header-banner">
-      <span class="text-thin-main">
-        <pre><?php echo get_theme_mod($header_banner_phonenumber) ?>   <?php echo get_theme_mod($header_banner_email) ?></pre>
-      </span>
-      <span class="text-thin-main">
+      <div class="header-banner-left">
+        <span class="text-thin-main">
+          <?php echo get_theme_mod($header_banner_phonenumber) ?>
+        </span>
+        <span class="text-thin-main">
+          <?php echo get_theme_mod($header_banner_email) ?>
+        </span>
+      </div>
+
+      <span class="text-thin-main hide-on-tablet-width">
         <?php echo get_theme_mod($header_banner_message) ?>
       </span>
     </div>

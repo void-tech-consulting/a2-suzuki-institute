@@ -225,6 +225,10 @@ input::placeholder {
   background: var(--background-main);
 }
 
+.header-banner-left *+* {
+  margin-left: 20px;
+}
+
 .header-main {
   position: absolute;
   top: 40px;
@@ -655,12 +659,22 @@ h2.page-header-text {
     display: none;
   }
 
+  .header-banner-left {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .secondary-header-text {
     font-size: 48px;
   }
 
   .header-main-left {
     font-size: 22px;
+  }
+
+  .text-thin-main {
+    font-size: 16px;
   }
 }
 
@@ -673,6 +687,10 @@ h2.page-header-text {
 
   .header-main-left {
     font-size: 20px;
+  }
+
+  .text-thin-main {
+    font-size: 14px;
   }
 }
 
