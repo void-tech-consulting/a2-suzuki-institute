@@ -209,6 +209,8 @@ input::placeholder {
   background-color: var(--background-main);
   position: relative;
   overflow: visible;
+  display: flex;
+  justify-content: center;
 }
 
 .header-banner {
@@ -232,6 +234,7 @@ input::placeholder {
   height: 110px;
   padding: 0 40px;
   width: 100%;
+  max-width: 1400px;
 }
 
 .header-main-left {
@@ -265,6 +268,7 @@ input::placeholder {
 **************************************/
 .site-nav ul {
   display: flex;
+  align-items: center;
 }
 
 .site-nav * {
@@ -285,6 +289,64 @@ input::placeholder {
 
 .site-nav li.current-menu-item a {
   color: white;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .header-main {
+    position: relative;
+  }
+
+  .menu-wrapper {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .8);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 900;
+    backdrop-filter: blur(4px);
+    display: none;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    max-height: 280px;
+    padding: 40px 0 0 0;
+  }
+
+  .site-nav li+li {
+    margin: 0;
+  }
+
+  .menu-toggle {
+    position: relative;
+    display: block;
+    z-index: 900;
+  }
+
+  .site-nav li {
+    display: block;
+  }
+
+  .active {
+    display: flex;
+  }
+
 }
 
 /*************************************
@@ -332,7 +394,7 @@ input::placeholder {
   padding: 20px 0;
   border: none;
   border-bottom: thin solid rgb(88, 88, 88);
-  width: 100%; 
+  width: 100%;
 }
 
 h2.page-header-text {
@@ -347,10 +409,10 @@ h2.page-header-text {
   margin-bottom: 40px;
 }
 
-.page-section + .page-section {
+.page-section+.page-section {
   border: none;
   border-top: thin solid rgb(88, 88, 88);
-  width: 100%; 
+  width: 100%;
 }
 
 .vertical-stack {
@@ -405,7 +467,6 @@ h2.page-header-text {
 /*************************************
   Testimonials styles 
 **************************************/
-
 .testimonials-container {
   display: flex;
 }
@@ -471,7 +532,7 @@ h2.page-header-text {
   display: flex;
 }
 
-.video-row + .video-row {
+.video-row+.video-row {
   margin-top: 40px;
 }
 
@@ -498,7 +559,7 @@ h2.page-header-text {
   display: flex;
 }
 
-.teacher-row + .teacher-row {
+.teacher-row+.teacher-row {
   margin-top: 40px;
 }
 
@@ -517,6 +578,30 @@ h2.page-header-text {
 }
 
 /*************************************
+  Special styles 
+**************************************/
+.secondary-header-text {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'EB Garamond', serif;
+  font-size: 54px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+
+.vertical-spacer {
+  height: 40px;
+}
+
+.shadow-hard {
+  text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .25);
+}
+
+.noscroll {
+  overflow-y: hidden;
+}
+
+/*************************************
   Responsive design
 **************************************/
 
@@ -525,6 +610,7 @@ h2.page-header-text {
   p {
     font-size: 16px;
   }
+
   .page-section {
     display: flex;
     flex-direction: column;
@@ -535,7 +621,7 @@ h2.page-header-text {
     flex-direction: column;
     text-align: center;
     align-items: center;
-  }	
+  }
 
   .page-section-side+.page-section-side {
     margin: 20px 0 0 0;
@@ -566,7 +652,15 @@ h2.page-header-text {
   }
 
   .hide-on-tablet-width {
-      display: none;
+    display: none;
+  }
+
+  .secondary-header-text {
+    font-size: 48px;
+  }
+
+  .header-main-left {
+    font-size: 22px;
   }
 }
 
@@ -576,35 +670,27 @@ h2.page-header-text {
     height: 128px;
     width: 92px;
   }
+
+  .header-main-left {
+    font-size: 20px;
+  }
 }
 
 /* phone (small width) */
 @media (max-width: 376px) {
-  
+
   .teacher-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
   }
-}
 
-/*************************************
-  Special styles 
-**************************************/
-.secondary-header-text {
-  color: white;
-  text-transform: uppercase;
-  font-family: 'EB Garamond', serif;
-  font-size: 54px;
-  line-height: 100%;
-  margin-bottom: 10px;
-}
+  .secondary-header-text {
+    font-size: 36px;
+  }
 
-.vertical-spacer {
-  height: 40px;
-}
-
-.shadow-hard {
-  text-shadow: 0px 4px 10px 0px rgba(0, 0, 0, .25);
+  .header-main-left {
+    font-size: 18px;
+  }
 }
