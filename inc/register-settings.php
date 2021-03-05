@@ -2,7 +2,8 @@
 
 register_nav_menu("primary", "Top Navbar");
 
-function home_customizer($wp_customize) {
+function home_customizer($wp_customize)
+{
   require 'section_vars.php';
   $wp_customize->add_section($home_section, array(
     'title' => 'Videos and News',
@@ -38,7 +39,8 @@ function home_customizer($wp_customize) {
 add_action('customize_register', 'home_customizer');
 
 // Jumbotron customizer
-function jumbotron_customizer($wp_customize) {
+function jumbotron_customizer($wp_customize)
+{
   require 'section_vars.php';
 
   $wp_customize->add_section($jumbotron_section, array(
@@ -46,7 +48,7 @@ function jumbotron_customizer($wp_customize) {
   ));
 
   $wp_customize->add_setting($jumbotron_headline, array(
-    'default' => 'Headline Placeholder'
+    'default' => 'Headline placeholder'
   ));
   $wp_customize->add_control(new WP_Customize_Control($wp_customize, $jumbotron_headline_control, array(
     'label' => 'Headline',
@@ -55,18 +57,19 @@ function jumbotron_customizer($wp_customize) {
   )));
 
   $wp_customize->add_setting($jumbotron_subheading, array(
-    'default' => 'Subheading Placeholder'
+    'default' => 'Subheading placeholder'
   ));
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $jumbotron_subheading_control, array(
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $jumbotron_subheading_control, array(
     'label' => 'Subheading',
     'section' => $jumbotron_section,
     'settings' => $jumbotron_subheading
   )));
-
 }
 add_action('customize_register', 'jumbotron_customizer');
 
-function header_banner_customizer($wp_customize) {
+// Header banner customizer
+function header_banner_customizer($wp_customize)
+{
   require 'section_vars.php';
 
   $wp_customize->add_section($header_banner_section, array(
@@ -74,38 +77,38 @@ function header_banner_customizer($wp_customize) {
   ));
 
   $wp_customize->add_setting($header_banner_phonenumber, array(
-    'default' => 'Phone Number Placeholder'
+    'default' => 'Phone number placeholder'
   ));
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_phonenumber_control, array(
-    'label' => 'Phone Number',
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_phonenumber_control, array(
+    'label' => 'Phone number',
     'section' => $header_banner_section,
     'settings' => $header_banner_phonenumber
   )));
 
   $wp_customize->add_setting($header_banner_email, array(
-    'default' => 'Email Placeholder'
+    'default' => 'Email placeholder'
   ));
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_email_control, array(
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_email_control, array(
     'label' => 'Email',
     'section' => $header_banner_section,
     'settings' => $header_banner_email
   )));
 
   $wp_customize->add_setting($header_banner_message, array(
-    'default' => 'Message Placeholder'
+    'default' => 'Message placeholder'
   ));
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, $header_banner_message_control, array(
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_message_control, array(
     'label' => 'Message',
     'section' => $header_banner_section,
     'settings' => $header_banner_message
   )));
-
 }
 add_action('customize_register', 'header_banner_customizer');
 
 // Photogallery
-function photogallery_repeatable_customizer($wp_customize) {
-  require 'section_vars.php';  
+function photogallery_repeatable_customizer($wp_customize)
+{
+  require 'section_vars.php';
   require_once 'controller.php';
 
   // wp_customize lets us add sections to the customize menu
@@ -129,8 +132,8 @@ function photogallery_repeatable_customizer($wp_customize) {
   $wp_customize->add_setting(
     $photogallery_repeater,
     array(
-        'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-        'transport' => 'refresh',
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
     )
   );
 
@@ -145,7 +148,7 @@ function photogallery_repeatable_customizer($wp_customize) {
       $photogallery_repeater,
       array(
         'label'     => esc_html__('Update photo gallery'),
-        'description'   => 'Add or remove images from the photo gallery on the home page.',
+        'description'   => 'Add or remove images from the photo gallery.',
         'section'       => $photogallery_section,
         'live_title_id' => 'label',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
@@ -167,16 +170,17 @@ function photogallery_repeatable_customizer($wp_customize) {
 }
 add_action('customize_register', 'photogallery_repeatable_customizer');
 
-
-function instrument_names($wp_customize) {
+// Instrument list customizer
+function instrument_names($wp_customize)
+{
   require 'section_vars.php';
   require_once 'controller.php';
 
-  $wp_customize->add_section($instrument_section, array (
-    'title' => 'Instruments being Teached'
+  $wp_customize->add_section($instrument_section, array(
+    'title' => 'Instrument List'
   ));
-  
-  $wp_customize->add_setting($instrument_repeater, array (
+
+  $wp_customize->add_setting($instrument_repeater, array(
     'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
     'transport' => 'refresh',
   ));
@@ -186,8 +190,8 @@ function instrument_names($wp_customize) {
       $wp_customize,
       $instrument_repeater,
       array(
-        'label'     => esc_html__('Add Instruments Taught'),
-        'description'   => 'Add or remove instruments from the home page',
+        'label'     => esc_html__('Update instruments'),
+        'description'   => 'Add or remove instruments from the list on the homepage.',
         'section'       => $instrument_section,
         'live_title_id' => 'title',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
@@ -205,7 +209,8 @@ function instrument_names($wp_customize) {
 }
 add_action('customize_register', 'instrument_names');
 
-function videos_repeatable_customizer($wp_customize) {
+function videos_repeatable_customizer($wp_customize)
+{
   require 'section_vars.php';
   require_once 'controller.php';
 

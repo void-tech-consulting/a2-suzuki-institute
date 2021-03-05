@@ -2,7 +2,6 @@
 
 function add_scripts()
 {
-
   wp_enqueue_script(
     "ajax-script",
     get_theme_file_uri("/js/mobile-menu.js"),
@@ -10,29 +9,6 @@ function add_scripts()
     '1.0.0',
     true
   );
-
-  // Example if you want a js file to run only on a specific page
-  if (is_front_page()) {
-    // enqueue a front page specific css or js file
-  } else if (is_page('example')) {
-    wp_enqueue_script(
-      "ajax-script",
-      get_theme_file_uri("/js/example.js"),
-      array('jquery'),
-      '1.0.0',
-      true
-    );
-    $title_nonce = wp_create_nonce('title_example');
-    // pass data to ajax through the array
-    wp_localize_script(
-      'ajax-script',
-      'my_ajax_obj',
-      array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => $title_nonce,
-      )
-    );
-  }
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
