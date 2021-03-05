@@ -163,6 +163,12 @@ button:hover {
   background: rgba(0, 0, 0, 0);
 }
 
+a button,
+a:visited button,
+a:hover button {
+  text-decoration: none;
+}
+
 /*************************************
   Input styles 
 **************************************/

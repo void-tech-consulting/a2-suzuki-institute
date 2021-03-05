@@ -7,7 +7,9 @@ require get_template_directory() . '/inc/section_vars.php';
   <span class="secondary-header-text shadow-hard"><?php echo get_theme_mod($jumbotron_headline) ?></span>
   <p class="shadow-hard"><?php echo get_theme_mod($jumbotron_subheading) ?></p>
   <div class="vertical-spacer"></div>
-  <button>Contact</button>
+  <a href="<?php get_bloginfo('url'); ?>/contact">
+    <button>Contact</button>
+  </a>
   <div class="vertical-spacer"></div>
   <div class="vertical-spacer"></div>
 </div>
@@ -36,11 +38,11 @@ require get_template_directory() . '/inc/section_vars.php';
         $data = get_instrument_data($instrument_repeater);
         if (!empty($data)) {
           foreach ($data as $k => $f) {
-        ?> 
-        <p>
-          <?php echo $f['instrument'] ?>
-        </p>
-        <?php } ?>
+        ?>
+            <p>
+              <?php echo $f['instrument'] ?>
+            </p>
+          <?php } ?>
         <?php } ?>
       </div>
     </div>
@@ -71,8 +73,8 @@ require get_template_directory() . '/inc/section_vars.php';
       ?>
         <div class="photo-gallery-container">
           <?php foreach ($data as $k => $f) {
-            $media = '<img src="'.esc_url( get_media_url( $f['image'] ) ).'" alt="'. $image_alt .'">';
-            ?>
+            $media = '<img src="' . esc_url(get_media_url($f['image'])) . '" alt="' . $image_alt . '">';
+          ?>
             <?php echo $media ?>
           <?php } ?>
         </div>
@@ -127,4 +129,4 @@ require get_template_directory() . '/inc/section_vars.php';
       </div>
     </div>
 
-  <?php get_footer(); ?>
+    <?php get_footer(); ?>
