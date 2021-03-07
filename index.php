@@ -78,6 +78,10 @@ require get_template_directory() . '/inc/section_vars.php';
             <?php echo $media ?>
           <?php } ?>
         </div>
+      <?php } else { ?>
+        <div class="video-row">
+          <p>No photos have been uploaded</p>
+        </div>
       <?php } ?>
     </div>
 
