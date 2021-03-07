@@ -7,45 +7,32 @@ Version: 1.0
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap');
-
 /*************************************
   Start reset 
 **************************************/
 
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+
+*, *::before, *::after {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   color: var(--text-grey-mid);
 }
 
 /* Remove default padding */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -55,8 +42,8 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   list-style: none;
 }
 
@@ -67,16 +54,15 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
+
 img {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+
+input, button, textarea, select {
   font: inherit;
 }
 
@@ -85,6 +71,7 @@ select {
 /*************************************
   General styles 
 **************************************/
+
 :root {
   --background-main: #151618;
   --background-raised: #232323;
@@ -135,6 +122,7 @@ a {
 /*************************************
   Button styles 
 **************************************/
+
 button {
   display: flex;
   justify-content: center;
@@ -163,15 +151,14 @@ button:hover {
   background: rgba(0, 0, 0, 0);
 }
 
-a button,
-a:visited button,
-a:hover button {
+a button, a:visited button, a:hover button {
   text-decoration: none;
 }
 
 /*************************************
   Input styles 
 **************************************/
+
 input {
   display: flex;
   width: 100%;
@@ -200,6 +187,7 @@ input::placeholder {
 /*************************************
   Text styles 
 **************************************/
+
 .text-thin-main {
   color: var(--text-grey-light);
   font-weight: 300;
@@ -209,6 +197,7 @@ input::placeholder {
 /*************************************
   Header styles 
 **************************************/
+
 .header-container {
   width: 100%;
   height: 150px;
@@ -276,6 +265,7 @@ input::placeholder {
 /*************************************
   Navigation menu styles 
 **************************************/
+
 .site-nav ul {
   display: flex;
   align-items: center;
@@ -310,11 +300,11 @@ input::placeholder {
 }
 
 /* Mobile menu */
+
 @media (max-width: 768px) {
   .header-main {
     position: relative;
   }
-
   .menu-wrapper {
     position: fixed;
     justify-content: center;
@@ -328,7 +318,6 @@ input::placeholder {
     backdrop-filter: blur(4px);
     display: none;
   }
-
   .site-nav ul {
     display: flex;
     flex-direction: column;
@@ -338,30 +327,26 @@ input::placeholder {
     max-height: 280px;
     padding: 40px 0 0 0;
   }
-
   .site-nav li+li {
     margin: 0;
   }
-
   .menu-toggle {
     position: relative;
     display: block;
     z-index: 900;
   }
-
   .site-nav li {
     display: block;
   }
-
   .active {
     display: flex;
   }
-
 }
 
 /*************************************
   Footer styles 
 **************************************/
+
 .footer-container {
   border: none;
   border-top: thin solid rgb(88, 88, 88);
@@ -384,6 +369,7 @@ input::placeholder {
 /*************************************
   General page styles 
 **************************************/
+
 .page-container {
   width: 100%;
   height: 100%;
@@ -440,6 +426,7 @@ h2.page-header-text {
 /*************************************
   Home page styles 
 **************************************/
+
 .home-jumbotron-content {
   position: relative;
   display: flex;
@@ -477,6 +464,7 @@ h2.page-header-text {
 /*************************************
   Testimonials styles 
 **************************************/
+
 .testimonials-container {
   display: flex;
 }
@@ -508,6 +496,7 @@ h2.page-header-text {
 /*************************************
   Contact page styles 
 **************************************/
+
 .contact-text {
   font-weight: 800;
   font-size: 18px;
@@ -538,6 +527,7 @@ h2.page-header-text {
 /*************************************
   Videos page styles 
 **************************************/
+
 .video-row {
   display: flex;
 }
@@ -562,8 +552,90 @@ h2.page-header-text {
 }
 
 /*************************************
+  Events page styles 
+**************************************/
+
+.event-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.event-responsive-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-box {
+  max-width: 207.86px;
+}
+
+.event-info {
+  width: 40%;
+}
+
+.month-text {
+  color: #FFFFFF;
+  align-self: center;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.day-text {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.event-title-text {
+  font-size: 24px;
+}
+
+.event-normal-text {
+  font-size: 18px;
+}
+
+.rectangle-1 {
+  /* red rectangle */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 154px;
+  height: 142.25px;
+  border-radius: 4px;
+  background: #CB5666;
+  margin-right: 40px;
+}
+
+.rectangle-2 {
+  /* inner white rectangle */
+  display: flex;
+  justify-content: center;
+  width: 154px;
+  height: 104.57px;
+  background: #F8F8F8;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.rectangle-3-row {
+  /* day # */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rectangle-3-column {
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+/*************************************
  Teachers page styles 
 **************************************/
+
 .teacher-row {
   width: 100%;
   display: flex;
@@ -578,7 +650,6 @@ h2.page-header-text {
   flex-direction: column;
   align-items: flex-start;
   margin-left: 40px;
-
 }
 
 .teacher-profile-pic {
@@ -590,6 +661,7 @@ h2.page-header-text {
 /*************************************
   Special styles 
 **************************************/
+
 .secondary-header-text {
   color: white;
   text-transform: uppercase;
@@ -616,43 +688,37 @@ h2.page-header-text {
 **************************************/
 
 /* tablet (large width) */
+
 @media (max-width: 768px) {
   p {
     font-size: 16px;
   }
-
   .page-section {
     display: flex;
     flex-direction: column;
   }
-
   .page-section-side {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
-
   .page-section-side+.page-section-side {
     margin: 20px 0 0 0;
   }
-
   .footer-section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-
   .testimonials-container {
     display: flex;
     flex-direction: column;
   }
-
   .video-row {
     flex-direction: column;
     align-items: center;
   }
-
   .video-text {
     width: 100%;
     margin-right: 0px;
@@ -660,60 +726,71 @@ h2.page-header-text {
     align-items: center;
     text-align: left;
   }
-
   .hide-on-tablet-width {
     display: none;
   }
-
   .header-banner-left {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-
   .secondary-header-text {
     font-size: 48px;
   }
-
   .header-main-left {
     font-size: 22px;
   }
-
   .text-thin-main {
     font-size: 16px;
+  }
+
+  .event-row {
+    justify-content: center;
+  }
+
+  .event-responsive-row {
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 207.86px;
+  }
+
+  .event-info {
+    width: 100%;
+  }
+
+  .rectangle-1 {
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 }
 
 /* tablet (medium width) */
+
 @media (max-width: 640px) {
   .teacher-profile-pic {
     height: 128px;
     width: 92px;
   }
-
   .header-main-left {
     font-size: 20px;
   }
-
   .text-thin-main {
     font-size: 14px;
   }
 }
 
 /* phone (small width) */
-@media (max-width: 376px) {
 
+@media (max-width: 376px) {
   .teacher-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 20px;
   }
-
   .secondary-header-text {
     font-size: 36px;
   }
-
   .header-main-left {
     font-size: 18px;
   }
