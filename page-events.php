@@ -9,14 +9,14 @@
             <div class="event-row">
                 <div class="event-responsive-row">
                     <div class="event-box">
-                        
+
                         <div class="rectangle-1">
-                            <p class="month-text">Month</p>
+                            <p class="month-text">January</p>
                             <div class="rectangle-2">
                                 <div class="rectangle-3-row">
                                     <div class="rectangle-3-column">
-                                        <p class="day-text">Day</p>
-                                        <p class="day-text">#</p>
+                                        <p class="day-text">Tuesday</p>
+                                        <p class="day-text">19</p>
                                     </div>
                                 </div>
                             </div>
