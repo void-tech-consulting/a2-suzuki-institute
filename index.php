@@ -20,7 +20,7 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- About -->
     <div class="page-section">
       <div class="page-section-side hide-on-tablet-width">
-        <img class="image-fill" src="<?php echo wp_get_attachment_url(get_theme_mod('homepage_about_image')) ?>" />
+        <img class="image-fill" src="<?php echo wp_get_attachment_url(get_theme_mod($homepage_about_image)) ?>" />
       </div>
       <div class="page-section-side">
         <h2>About</h2>
