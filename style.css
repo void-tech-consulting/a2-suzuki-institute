@@ -561,6 +561,19 @@ h2.page-header-text {
   align-items: flex-start;
 }
 
+.event-responsive-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-box {
+  max-width: 207.86px;
+}
+
+.event-info {
+  width: 40%;
+}
+
 .month-text {
   color: #FFFFFF;
   align-self: center;
@@ -577,6 +590,10 @@ h2.page-header-text {
 
 .event-title-text {
   font-size: 24px;
+}
+
+.event-normal-text {
+  font-size: 18px;
 }
 
 .rectangle-1 {
@@ -725,6 +742,25 @@ h2.page-header-text {
   }
   .text-thin-main {
     font-size: 16px;
+  }
+
+  .event-row {
+    justify-content: center;
+  }
+
+  .event-responsive-row {
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 207.86px;
+  }
+
+  .event-info {
+    width: 100%;
+  }
+
+  .rectangle-1 {
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 }
 
