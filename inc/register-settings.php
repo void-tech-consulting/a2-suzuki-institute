@@ -38,6 +38,68 @@ function home_customizer($wp_customize)
 }
 add_action('customize_register', 'home_customizer');
 
+// Homepage customizer
+function homepage_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($homepage_section, array(
+    'title' => 'Homepage Customizer',
+  ));
+
+  // About text
+  $wp_customize->add_setting($homepage_about, array(
+    'default' => "About this site"
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $homepage_about_control, array(
+    'label' => 'About',
+    'section' => $homepage_section,
+    'settings' => $homepage_about
+  )));
+  // About image
+  $wp_customize->add_setting($homepage_about_image);
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control(
+    $wp_customize,
+    $homepage_about_image_control,
+    array(
+      'label' => 'About Image',
+      'section' => $homepage_section,
+      'settings' => $homepage_about_image,
+      'width' => 800,
+      'height' => 600
+    )
+  ));
+
+  $wp_customize->add_setting($instrument_repeater, array(
+    'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $instrument_repeater,
+      array(
+        'label'     => esc_html__('Update instruments'),
+        'description'   => 'Add or remove instruments from the list on the homepage.',
+        'section'       => $homepage_section,
+        'live_title_id' => 'instrument',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 10, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'instrument'  => array(
+            'title' => esc_html__('Instrument Name'),
+            'type'  => 'text',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'homepage_customizer');
+
 // Jumbotron customizer
 function jumbotron_customizer($wp_customize)
 {
@@ -170,45 +232,7 @@ function photogallery_repeatable_customizer($wp_customize)
 }
 add_action('customize_register', 'photogallery_repeatable_customizer');
 
-// Instrument list customizer
-function instrument_names($wp_customize)
-{
-  require 'section_vars.php';
-  require_once 'controller.php';
-
-  $wp_customize->add_section($instrument_section, array(
-    'title' => 'Instrument List'
-  ));
-
-  $wp_customize->add_setting($instrument_repeater, array(
-    'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
-    'transport' => 'refresh',
-  ));
-
-  $wp_customize->add_control(
-    new Onepress_Customize_Repeatable_Control(
-      $wp_customize,
-      $instrument_repeater,
-      array(
-        'label'     => esc_html__('Update instruments'),
-        'description'   => 'Add or remove instruments from the list on the homepage.',
-        'section'       => $instrument_section,
-        'live_title_id' => 'title',
-        'title_format'  => esc_html__('[live_title]'), // [live_title]
-        'max_item'      => 10, // Maximum item can add
-        'limited_msg'   => wp_kses_post(__('Max items added')),
-        'fields'    => array(
-          'instrument'  => array(
-            'title' => esc_html__('Instrument Name'),
-            'type'  => 'text',
-          ),
-        ),
-      )
-    )
-  );
-}
-add_action('customize_register', 'instrument_names');
-
+// Videos page customizer
 function videos_repeatable_customizer($wp_customize)
 {
   require 'section_vars.php';

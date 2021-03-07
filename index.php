@@ -20,11 +20,11 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- About -->
     <div class="page-section">
       <div class="page-section-side hide-on-tablet-width">
-        <img src="<?php echo get_bloginfo('template_url') ?>/images/students-1.jpg" />
+        <img class="image-fill" src="<?php echo wp_get_attachment_url(get_theme_mod('homepage_about_image')) ?>" />
       </div>
       <div class="page-section-side">
         <h2>About</h2>
-        <p>The mission of the Ann Arbor Suzuki Institute is to provide excellent music instruction for children using the <a href="https://en.wikipedia.org/wiki/Suzuki_method">Suzuki Method</a> in a complete way: using teachers with SAA registered teacher training, who offer individual instruction, group classes, support for parents and participate in ongoing teacher development and renewal.</p>
+        <p><?php echo get_theme_mod($homepage_about) ?></p>
         <div class="vertical-spacer"></div>
         <button class="btn-outline">Meet our teachers</button>
       </div>

@@ -451,6 +451,12 @@ h2.page-header-text {
   margin-left: 40px;
 }
 
+.image-fill {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /*************************************
   Home page styles 
 **************************************/
