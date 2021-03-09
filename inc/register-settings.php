@@ -2,8 +2,7 @@
 
 register_nav_menu("primary", "Top Navbar");
 
-function home_customizer($wp_customize)
-{
+function home_customizer($wp_customize) {
   require 'section_vars.php';
   $wp_customize->add_section($home_section, array(
     'title' => 'Videos and News',
@@ -39,8 +38,7 @@ function home_customizer($wp_customize)
 add_action('customize_register', 'home_customizer');
 
 // Homepage customizer
-function homepage_customizer($wp_customize)
-{
+function homepage_customizer($wp_customize) {
   require 'section_vars.php';
   require_once 'controller.php';
 
@@ -101,8 +99,7 @@ function homepage_customizer($wp_customize)
 add_action('customize_register', 'homepage_customizer');
 
 // Jumbotron customizer
-function jumbotron_customizer($wp_customize)
-{
+function jumbotron_customizer($wp_customize) {
   require 'section_vars.php';
 
   $wp_customize->add_section($jumbotron_section, array(
@@ -130,8 +127,7 @@ function jumbotron_customizer($wp_customize)
 add_action('customize_register', 'jumbotron_customizer');
 
 // Header banner customizer
-function header_banner_customizer($wp_customize)
-{
+function header_banner_customizer($wp_customize) {
   require 'section_vars.php';
 
   $wp_customize->add_section($header_banner_section, array(
@@ -168,8 +164,7 @@ function header_banner_customizer($wp_customize)
 add_action('customize_register', 'header_banner_customizer');
 
 // Photogallery
-function photogallery_repeatable_customizer($wp_customize)
-{
+function photogallery_repeatable_customizer($wp_customize) {
   require 'section_vars.php';
   require_once 'controller.php';
 
@@ -233,8 +228,7 @@ function photogallery_repeatable_customizer($wp_customize)
 add_action('customize_register', 'photogallery_repeatable_customizer');
 
 // Videos page customizer
-function videos_repeatable_customizer($wp_customize)
-{
+function videos_repeatable_customizer($wp_customize) {
   require 'section_vars.php';
   require_once 'controller.php';
 
@@ -284,3 +278,59 @@ function videos_repeatable_customizer($wp_customize)
   );
 }
 add_action('customize_register', 'videos_repeatable_customizer');
+
+// Teachers page customizer
+function teachers_repeatable_customizer($wp_customize) {
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($teachers_section, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Teachers',
+  ));
+
+  $wp_customize->add_setting(
+    $teachers_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $teachers_repeater,
+      array(
+        'label'     => esc_html__('Update teacher bios'),
+        'description'   => 'Modify teachers bios',
+        'section'       => $teachers_section,
+        'live_title_id' => 'title',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 20, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'photo'  => array(
+            'title' => esc_html__('Teacher Photo'),
+            'type'  => 'media',
+          ),
+          'name'  => array(
+            'title' => esc_html__('Teacher Name'),
+            'type'  => 'text',
+          ),
+          'job'  => array(
+            'title' => esc_html__('Job'),
+            'type'  => 'text',
+          ),
+          'bio'  => array(
+            'title' => esc_html__('Bio'),
+            'type'  => 'text',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'teachers_repeatable_customizer');
