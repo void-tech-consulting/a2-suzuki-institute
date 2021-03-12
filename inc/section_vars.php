@@ -28,6 +28,8 @@ $instrument_repeater = 'instrument_repeater';
 $photogallery_section = 'photogallery_section';
 $photogallery_repeater = 'photogallery_repeater';
 
-
 $videos_section = 'videos_section';
 $videos_repeater = 'videos_repeater';
+
+$teachers_section = 'teachers_section';
+$teachers_repeater = 'teachers_repeater';
