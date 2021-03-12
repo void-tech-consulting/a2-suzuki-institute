@@ -126,6 +126,20 @@ function jumbotron_customizer($wp_customize)
     'section' => $jumbotron_section,
     'settings' => $jumbotron_subheading
   )));
+
+  $wp_customize->add_setting($jumbotron_background_image);
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control(
+    $wp_customize,
+    $jumbotron_background_image_control,
+    array(
+      'label' => 'Background Image',
+      'section' => $jumbotron_section,
+      'settings' => $jumbotron_background_image,
+      'width' =>  1441,
+      'height' => 540
+    )
+  ));
+
 }
 add_action('customize_register', 'jumbotron_customizer');
 
@@ -284,3 +298,58 @@ function videos_repeatable_customizer($wp_customize)
   );
 }
 add_action('customize_register', 'videos_repeatable_customizer');
+
+
+function events_repeatable_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($events_section, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Events',
+  ));
+
+  $wp_customize->add_setting(
+    $events_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $events_repeater,
+      array(
+        'label'     => esc_html__('Update events gallery'),
+        'description'   => 'Add or remove events from the events page and add a title and description.',
+        'section'       => $events_section,
+        'live_title_id' => 'title',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 20, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'title'  => array(
+            'title' => esc_html__('Event Title'),
+            'type'  => 'text',
+          ),
+          'description'  => array(
+            'title' => esc_html__('Event Description'),
+            'type'  => 'text',
+          ),
+          'video'  => array(
+            'title' => esc_html__('Event'),
+            'type'  => 'media',
+          ),
+        ),
+      )
+    )
+  );
+}
+add_action('customize_register', 'events_repeatable_customizer');
+
+

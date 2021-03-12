@@ -9,6 +9,8 @@ $jumbotron_headline = 'jumbotron_headline';
 $jumbotron_headline_control = 'jumbotron_headline_control';
 $jumbotron_subheading = 'jumbotron_subheading';
 $jumbotron_subheading_control = 'jumbotron_subheading_control';
+$jumbotron_background_image = 'jumbotron_background_image';
+$jumbotron_background_image_control = 'jumbotron_backround_image_control';
 
 $header_banner_section = 'header_banner_section';
 $header_banner_phonenumber = 'header_banner_phonenumber';
@@ -31,3 +33,6 @@ $photogallery_repeater = 'photogallery_repeater';
 
 $videos_section = 'videos_section';
 $videos_repeater = 'videos_repeater';
+
+$events_section = 'events_section';
+$events_repeater = 'events_repeater';
