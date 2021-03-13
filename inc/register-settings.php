@@ -326,7 +326,7 @@ function events_repeatable_customizer($wp_customize)
       $events_repeater,
       array(
         'label'     => esc_html__('Update events gallery'),
-        'description'   => 'Add or remove events from the events page and add a title and description.',
+        'description'   => 'Add or remove events from the events page and add a title, date, location, and description.',
         'section'       => $events_section,
         'live_title_id' => 'title',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
@@ -337,13 +337,25 @@ function events_repeatable_customizer($wp_customize)
             'title' => esc_html__('Event Title'),
             'type'  => 'text',
           ),
+          'location'  => array(
+            'title' => esc_html__('Location (place/time)'),
+            'type'  => 'text',
+          ),
           'description'  => array(
             'title' => esc_html__('Event Description'),
             'type'  => 'text',
           ),
-          'video'  => array(
-            'title' => esc_html__('Event'),
-            'type'  => 'media',
+          'month'  => array(
+            'title' => esc_html__('Month'),
+            'type'  => 'text',
+          ),
+          'day'  => array(
+            'title' => esc_html__('Day'),
+            'type'  => 'text',
+          ),
+          'date'  => array(
+            'title' => esc_html__('Date #'),
+            'type'  => 'text',
           ),
         ),
       )

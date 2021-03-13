@@ -191,6 +191,26 @@ if (!function_exists('get_videos_data')) {
 	}
 }
 
+if (!function_exists('get_events_data')) {
+	/**
+	 * Get Events Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_events_data($section) {
+		return template_data($section, array(
+			'title' => '',
+			'description' => '',
+			'date' => '',
+			'day' => '',
+			'month' => '',
+			'location' => ''
+		));
+	}
+}
+
 // Get url to media for repeater sections
 if ( ! function_exists( 'get_media_url' ) ) {
 	function get_media_url( $media = array(), $size = 'full' ) {
