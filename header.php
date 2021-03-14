@@ -22,7 +22,7 @@
 
     <!-- background image -->
     <div class="header-background">
-      <img src="<?php echo get_bloginfo('template_url') ?>/images/jumbotron-background.png" />
+      <img src="<?php echo wp_get_attachment_url(get_theme_mod($jumbotron_background_image)) ?>" />
     </div>
 
     <!-- Contact Info / Alert message -->

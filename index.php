@@ -26,7 +26,9 @@ require get_template_directory() . '/inc/section_vars.php';
         <h2>About</h2>
         <p><?php echo get_theme_mod($homepage_about) ?></p>
         <div class="vertical-spacer"></div>
-        <button class="btn-outline">Meet our teachers</button>
+        <a href="<?php get_bloginfo('url'); ?>/teachers">
+          <button class="btn-outline">Meet our teachers</button>
+        </a>
       </div>
     </div>
 
@@ -50,13 +52,16 @@ require get_template_directory() . '/inc/section_vars.php';
     <!-- Videos preview -->
     <div class="page-section">
       <div class="page-section-side">
-        <h2>Learning great technique, musicianship, and character from the start</h2>
-        <p>Watch the progress of a 5 year old student in Suzuki Guitar. We offer age appropriate classes for students that teach good technique from the very beginning. </p>
+        <h2><?php echo get_theme_mod($homepage_videos_headline) ?></h2>
+        <p><?php echo get_theme_mod($homepage_videos_description) ?></p>
         <div class="vertical-spacer"></div>
-        <button class="btn-outline">See all videos</button>
+        <a href="<?php get_bloginfo('url'); ?>/videos">
+          <button class="btn-outline">See all videos</button>
+        </a>
       </div>
       <div class="page-section-side">
-        <img src="<?php echo get_bloginfo('template_url') ?>/images/video-thumbnail.png" />
+        <iframe class="embedded-video" src="<?php echo get_theme_mod($homepage_videos_video); ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
       </div>
     </div>
 
