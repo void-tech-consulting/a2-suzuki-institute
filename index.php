@@ -66,16 +66,16 @@ require get_template_directory() . '/inc/section_vars.php';
     </div>
 
     <!-- Photo gallery -->
-    <div class="page-section vertical-stack">
-      <h2>
-        Photo Gallery
-      </h2>
-      <?php
-      require 'inc/section_vars.php';
-      // get_example_data is in /inc/template_functions.php
-      $data  = get_photogallery_data($photogallery_repeater);
-      if (!empty($data)) {
-      ?>
+    <?php
+    require 'inc/section_vars.php';
+    // get_example_data is in /inc/template_functions.php
+    $data  = get_photogallery_data($photogallery_repeater);
+    if (!empty($data)) {
+    ?>
+      <div class="page-section vertical-stack">
+        <h2>
+          Photo Gallery
+        </h2>
         <div class="photo-gallery-container">
           <?php foreach ($data as $k => $f) {
             $media = '<img src="' . esc_url(get_media_url($f['image'])) . '" alt="' . $image_alt . '">';
@@ -83,55 +83,37 @@ require get_template_directory() . '/inc/section_vars.php';
             <?php echo $media ?>
           <?php } ?>
         </div>
-      <?php } ?>
-    </div>
+      </div>
+    <?php } ?>
 
     <!-- Testimonial -->
-    <div class="page-section vertical-stack">
-      <h2>
-        Testimonials
-      </h2>
-      <div class="testimonials-container">
-        <div class="testimonial-container">
-          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
-          <p class="testimonial-text">
-            “Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Phasellus euismod semper dolor, a
-            hendrerit odio placerat nec. Nunc
-            massa massa, faucibus congue
-            massa commodo, sodales pretium
-            tellus. “
-          </p>
-          <p class="testimonial-parent"> -Parent </p>
-        </div>
-        <div class="testimonial-container">
-          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
-          <p class="testimonial-text">
-            “Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Phasellus euismod semper dolor, a
-            hendrerit odio placerat nec. Nunc
-            massa massa, faucibus congue
-            massa commodo, sodales pretium
-            tellus. “
-          </p>
-          <p class="testimonial-parent"> -Parent </p>
-        </div>
-        <div class="testimonial-container">
-          <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
-          <p class="testimonial-text">
-            “Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Phasellus euismod semper dolor, a
-            hendrerit odio placerat nec. Nunc
-            massa massa, faucibus congue
-            massa commodo, sodales pretium
-            tellus. “
-          </p>
-          <p class="testimonial-parent"> -Parent </p>
+    <?php
+    require 'inc/section_vars.php';
+    // get_example_data is in /inc/template_functions.php
+    $data  = get_testimonials_data($testimonials_repeater);
+    if (!empty($data)) {
+    ?>
+      <div class="page-section vertical-stack">
+        <h2>
+          Testimonials
+        </h2>
+        <div class="testimonials-container">
+          <?php foreach ($data as $k => $f) {
+          ?>
+            <div class="testimonial-container">
+              <img class="quote" src="<?php echo get_template_directory_uri(); ?>/images/quote.svg" alt="Quote">
+              <p class="testimonial-text">
+                "
+                <?php echo $f['text_content'] ?>
+                "
+              </p>
+              <p class="testimonial-parent">
+                - <?php echo $f['person_name'] ?>
+              </p>
+            </div>
+          <?php } ?>
         </div>
       </div>
-    </div>
+    <?php } ?>
 
     <?php get_footer(); ?>

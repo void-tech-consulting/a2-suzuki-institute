@@ -5,7 +5,7 @@ Description: This theme was custom made to be used for the Ann Arbor Suzuki Inst
 Version: 1.0
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap');
 /*************************************
   Start reset 
@@ -119,13 +119,13 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 28px;
-  margin-bottom: 1rem;
+  margin-bottom: .4rem;
 }
 
 h4 {
-  font-weight: 600;
-  font-size: 24px;
-  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: .6rem;
 }
 
 hr {
@@ -458,6 +458,21 @@ h2.page-header-text {
   object-fit: cover;
 }
 
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-row+.section-row {
+  margin-top: 40px;
+  border-top: thin solid rgb(88, 88, 88);
+  padding-top: 40px;
+}
+
+.section-row > * {
+  min-width: 30%;
+}
+
 /*************************************
   Home page styles 
 **************************************/
@@ -558,27 +573,12 @@ h2.page-header-text {
   Videos page styles 
 **************************************/
 
-.video-row {
-  display: flex;
-}
-
-.video-row+.video-row {
-  margin-top: 40px;
-}
-
 .video-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
   margin-right: 24px;
-}
-
-.video-thumbnail {
-  /*Not sure if this is just a thumbnail or an embedded video */
-  display: flex;
-  width: 50%;
-  margin-left: 24px;
 }
 
 /*************************************
@@ -666,25 +666,16 @@ h2.page-header-text {
  Teachers page styles 
 **************************************/
 
-.teacher-row {
-  width: 100%;
-  display: flex;
-}
-
-.teacher-row+.teacher-row {
-  margin-top: 40px;
-}
-
 .teacher-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 40px;
 }
 
 .teacher-profile-pic {
   height: 255px;
   width: 184px;
+  margin: 0 20px 20px 0;
   object-fit: cover;
 }
 
@@ -714,8 +705,11 @@ h2.page-header-text {
 }
 
 .embedded-video {
+  flex: 1;
   width: 100%;
   height: 100%;
+  min-height: 240px;
+  padding: 20px;
 }
 
 /*************************************
@@ -756,16 +750,12 @@ h2.page-header-text {
     flex-direction: column;
   }
 
-  .video-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .video-text {
+    flex: 1;
     width: 100%;
     margin-right: 0px;
     margin-bottom: 24px;
-    align-items: center;
+    text-align: center;
     text-align: left;
   }
 
@@ -831,13 +821,6 @@ h2.page-header-text {
 /* phone (small width) */
 
 @media (max-width: 376px) {
-  .teacher-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-  }
-
   .secondary-header-text {
     font-size: 36px;
   }

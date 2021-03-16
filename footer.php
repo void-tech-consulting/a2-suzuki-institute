@@ -4,8 +4,8 @@
         <ion-icon name="logo-facebook" size="large"></ion-icon>
     </a>
     <div class="footer-section">
-        <p class="text-thin-main"><?php echo get_theme_mod($header_banner_phonenumber) ?></p>
-        <p class="text-thin-main"><?php echo get_theme_mod($header_banner_email) ?></p>
+        <p class="text-thin-main"><?php echo get_theme_mod($company_information_phone) ?></p>
+        <p class="text-thin-main"><?php echo get_theme_mod($company_information_email) ?></p>
     </div>
 </div>
 </div>

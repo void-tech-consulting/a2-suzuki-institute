@@ -1,42 +1,49 @@
 <?php
 
+/*************************************
+  Menu Registration
+ **************************************/
 register_nav_menu("primary", "Top Navbar");
 
-function home_customizer($wp_customize)
+/*************************************
+  Company Information customizer
+ **************************************/
+function company_information_customizer($wp_customize)
 {
   require 'section_vars.php';
-  $wp_customize->add_section($home_section, array(
-    'title' => 'Videos and News',
+
+  $wp_customize->add_section($company_information_section, array(
+    'title' => 'Company Information',
   ));
 
-  $wp_customize->add_setting($home_top_vid, array(
-    'default' => 'https://www.youtube.com/embed/A0Wyx-OOX4A',
-    'sanitize_callback' => 'sanitize_text_field',
+  $wp_customize->add_setting($company_information_phone, array(
+    'default' => 'Phone number placeholder'
   ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $company_information_phone_control, array(
+    'label' => 'Phone number',
+    'section' => $company_information_section,
+    'settings' => $company_information_phone
+  )));
 
-  $wp_customize->add_control($home_top_vid, array(
-    'label' => 'Top Video Embed',
-    'section' => $home_section,
+  $wp_customize->add_setting($company_information_email, array(
+    'default' => 'Email placeholder'
   ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $company_information_email_control, array(
+    'label' => 'Email',
+    'section' => $company_information_section,
+    'settings' => $company_information_email
+  )));
 
-  $wp_customize->add_setting($home_top_img);
-  $wp_customize->add_control(new WP_Customize_Image_Control(
-    $wp_customize,
-    $home_top_img,
-    array(
-      'label' => 'Top Image',
-      'section' => $home_section
-    )
+  $wp_customize->add_setting($company_information_message, array(
+    'default' => 'Message placeholder'
   ));
-  // Top Desc
-  $wp_customize->add_setting($home_top_desc);
-  $wp_customize->add_control($home_top_desc, array(
-    'label' => 'Top Description',
-    'section' => $home_section,
-    'type' => 'textarea'
-  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $company_information_message_control, array(
+    'label' => 'Message',
+    'section' => $company_information_section,
+    'settings' => $company_information_message
+  )));
 }
-add_action('customize_register', 'home_customizer');
+add_action('customize_register', 'company_information_customizer');
 
 
 /*************************************
@@ -142,7 +149,7 @@ function jumbotron_customizer($wp_customize)
   require 'section_vars.php';
 
   $wp_customize->add_section($jumbotron_section, array(
-    'title' => 'Jumbotron',
+    'title' => 'Homepage: Jumbotron',
   ));
 
   // Jumbotron headline
@@ -182,44 +189,55 @@ function jumbotron_customizer($wp_customize)
 add_action('customize_register', 'jumbotron_customizer');
 
 /*************************************
-  Header banner customizer
+  Testimonials customizer
  **************************************/
-function header_banner_customizer($wp_customize)
+function testimonials_customizer($wp_customize)
 {
   require 'section_vars.php';
+  require_once 'controller.php';
 
-  $wp_customize->add_section($header_banner_section, array(
-    'title' => 'Header Banner',
+  $wp_customize->add_section($homepage_section_testimonials, array(
+
+    // This is the name of the section that will visually display in 
+    // the admin panel
+    'title' => 'Homepage: Testimonials',
   ));
 
-  $wp_customize->add_setting($header_banner_phonenumber, array(
-    'default' => 'Phone number placeholder'
-  ));
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_phonenumber_control, array(
-    'label' => 'Phone number',
-    'section' => $header_banner_section,
-    'settings' => $header_banner_phonenumber
-  )));
+  $wp_customize->add_setting(
+    $testimonials_repeater,
+    array(
+      'sanitize_callback' => 'onepress_sanitize_repeatable_data_field',
+      'transport' => 'refresh',
+    )
+  );
 
-  $wp_customize->add_setting($header_banner_email, array(
-    'default' => 'Email placeholder'
-  ));
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_email_control, array(
-    'label' => 'Email',
-    'section' => $header_banner_section,
-    'settings' => $header_banner_email
-  )));
-
-  $wp_customize->add_setting($header_banner_message, array(
-    'default' => 'Message placeholder'
-  ));
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $header_banner_message_control, array(
-    'label' => 'Message',
-    'section' => $header_banner_section,
-    'settings' => $header_banner_message
-  )));
+  $wp_customize->add_control(
+    new Onepress_Customize_Repeatable_Control(
+      $wp_customize,
+      $testimonials_repeater,
+      array(
+        'label'     => esc_html__('Update testimonials'),
+        'description'   => 'Add, update, or remove testimonials from the home page.',
+        'section'       => $homepage_section_testimonials,
+        'live_title_id' => 'person_name',
+        'title_format'  => esc_html__('[live_title]'), // [live_title]
+        'max_item'      => 20, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'fields'    => array(
+          'text_content'  => array(
+            'title' => esc_html__('Testimonial Quote'),
+            'type'  => 'textarea',
+          ),
+          'person_name'  => array(
+            'title' => esc_html__('Person Name'),
+            'type'  => 'text',
+          )
+        ),
+      )
+    )
+  );
 }
-add_action('customize_register', 'header_banner_customizer');
+add_action('customize_register', 'testimonials_customizer');
 
 /*************************************
   Photogallery customizer
@@ -330,11 +348,11 @@ function videos_repeatable_customizer($wp_customize)
           ),
           'description'  => array(
             'title' => esc_html__('Video Description'),
-            'type'  => 'text',
+            'type'  => 'textarea',
           ),
-          'video'  => array(
-            'title' => esc_html__('Video'),
-            'type'  => 'media',
+          'video_src'  => array(
+            'title' => esc_html__('Video Embed URL'),
+            'type'  => 'text',
           ),
         ),
       )
@@ -371,13 +389,13 @@ function teachers_repeatable_customizer($wp_customize)
       $wp_customize,
       $teachers_repeater,
       array(
-        'label'     => esc_html__('Update teacher bios'),
-        'description'   => 'Modify teachers bios',
+        'label'     => esc_html__('Update faculty information'),
+        'description'   => 'Modify list of current faculty members, faculty positions, and faculty bios.',
         'section'       => $teachers_section,
-        'live_title_id' => 'title',
+        'live_title_id' => 'name',
         'title_format'  => esc_html__('[live_title]'), // [live_title]
-        'max_item'      => 20, // Maximum item can add
-        'limited_msg'   => wp_kses_post(__('Max items added')),
+        'max_item'      => 30, // Maximum item can add
+        'limited_msg'   => wp_kses_post(__('Max teachers added')),
         'fields'    => array(
           'photo'  => array(
             'title' => esc_html__('Teacher Photo'),

@@ -1,8 +1,4 @@
 <?php
-$home_section = 'home_section';
-$home_top_vid = 'top_vid';
-$home_top_img = 'home_top_img';
-$home_top_desc = 'home_top_desc';
 
 // Jumbotron
 $jumbotron_section = 'jumbotron_section';
@@ -14,13 +10,13 @@ $jumbotron_background_image = 'jumbotron_background_image';
 $jumbotron_background_image_control = 'jumbotron_backround_image_control';
 
 // Header
-$header_banner_section = 'header_banner_section';
-$header_banner_phonenumber = 'header_banner_phonenumber';
-$header_banner_phonenumber_control = 'header_banner_phonenumber_control';
-$header_banner_email = 'header_banner_email';
-$header_banner_email_control = 'header_banner_email_control';
-$header_banner_message = 'header_banner_message';
-$header_banner_message_control = 'header_banner_message_control';
+$company_information_section = 'company_information_section';
+$company_information_phone = 'company_information_phone';
+$company_information_phone_control = 'company_information_phone_control';
+$company_information_email = 'company_information_email';
+$company_information_email_control = 'company_information_email_control';
+$company_information_message = 'company_information_message';
+$company_information_message_control = 'company_information_message_control';
 
 // Homepage
 $homepage_section = 'homepage_section';
@@ -35,6 +31,10 @@ $homepage_videos_headline = 'homepage_videos_headline';
 $homepage_videos_description = 'homepage_videos_description';
 
 $homepage_videos_video = 'homepage_videos_video';
+
+// Testimonials
+$homepage_section_testimonials = 'homepage_section_testimonials';
+$testimonials_repeater = 'testimonials_repeater';
 
 // Photogallery
 $photogallery_section = 'photogallery_section';

@@ -29,15 +29,15 @@
     <div class="header-banner">
       <div class="header-banner-left">
         <span class="text-thin-main">
-          <?php echo get_theme_mod($header_banner_phonenumber) ?>
+          <?php echo get_theme_mod($company_information_phone) ?>
         </span>
         <span class="text-thin-main">
-          <?php echo get_theme_mod($header_banner_email) ?>
+          <?php echo get_theme_mod($company_information_email) ?>
         </span>
       </div>
 
       <span class="text-thin-main hide-on-tablet-width">
-        <?php echo get_theme_mod($header_banner_message) ?>
+        <?php echo get_theme_mod($company_information_message) ?>
       </span>
     </div>
 

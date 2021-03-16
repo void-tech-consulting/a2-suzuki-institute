@@ -12,23 +12,18 @@
             $data = get_videos_data($videos_repeater);
             if (!empty($data)) {
                 foreach ($data as $k => $f) { ?>
-                    <div class="video-row">
+                    <div class="section-row">
                         <div class="video-text">
                             <h3><?php echo $f['title'] ?></h3>
                             <p><?php echo $f['description'] ?></p>
                         </div>
-                        <div class="video-thumbnail">
-                            <video width="320" height="240" controls>
-                                <?php
-                                $media = '<source src="' . esc_url(get_media_url($f['video'])) . '" type=video/mp4> </video>';
-                                ?>
-                                <?php echo $media ?>
-                        </div>
+                        <iframe class="embedded-video" src="<?php echo $f['video_src']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
                     </div>
 
                 <?php } ?>
             <?php } else { ?>
-                <div class="video-row">
+                <div class="section-row">
                     <p>No videos have been uploaded</p>
                 </div>
             <?php } ?>

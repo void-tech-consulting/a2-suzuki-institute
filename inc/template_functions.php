@@ -163,6 +163,23 @@ if (!function_exists('get_photogallery_data')) {
 	}
 }
 
+if (!function_exists('get_testimonials_data')) {
+	/**
+	 * Get Testimonials Data
+	 *
+	 * @since 1.1.4
+	 * @return array
+	 */
+
+	function get_testimonials_data($section)
+	{
+		return template_data($section, array(
+			'person_name' => '',
+			'text_content' => ''
+		));
+	}
+}
+
 if (!function_exists('get_instrument_data')) {
 	/**
 	 * Get Instrument Data
