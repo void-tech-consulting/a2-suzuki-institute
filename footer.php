@@ -1,6 +1,6 @@
 <?php require get_template_directory() . '/inc/section_vars.php'; ?>
 <div class="footer-container">
-    <a href="https://www.facebook.com">
+    <a href="<?php echo get_theme_mod($company_link_facebook); ?>" target="_blank">
         <ion-icon name="logo-facebook" size="large"></ion-icon>
     </a>
     <div class="footer-section">
