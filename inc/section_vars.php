@@ -17,6 +17,9 @@ $company_information_email = 'company_information_email';
 $company_information_email_control = 'company_information_email_control';
 $company_information_message = 'company_information_message';
 $company_information_message_control = 'company_information_message_control';
+$company_link_facebook = 'company_link_facebook';
+$company_link_facebook_control = 'company_link_facebook_conrol';
+
 
 // Homepage
 $homepage_section = 'homepage_section';
@@ -51,3 +54,9 @@ $teachers_repeater = 'teachers_repeater';
 // Events
 $events_section = 'events_section';
 $events_repeater = 'events_repeater';
+
+// Contact
+$contact_section = 'contact_section';
+$contact_headline = 'contact_headline';
+$contact_desc = 'contact_desc';
+$contact_form_shortcode = 'contact_form_shortcode';

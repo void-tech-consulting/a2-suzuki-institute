@@ -16,6 +16,7 @@ function company_information_customizer($wp_customize)
     'title' => 'Company Information',
   ));
 
+  // Phone number
   $wp_customize->add_setting($company_information_phone, array(
     'default' => 'Phone number placeholder'
   ));
@@ -25,6 +26,7 @@ function company_information_customizer($wp_customize)
     'settings' => $company_information_phone
   )));
 
+  // Email
   $wp_customize->add_setting($company_information_email, array(
     'default' => 'Email placeholder'
   ));
@@ -34,6 +36,7 @@ function company_information_customizer($wp_customize)
     'settings' => $company_information_email
   )));
 
+  // Primary message
   $wp_customize->add_setting($company_information_message, array(
     'default' => 'Message placeholder'
   ));
@@ -41,6 +44,16 @@ function company_information_customizer($wp_customize)
     'label' => 'Message',
     'section' => $company_information_section,
     'settings' => $company_information_message
+  )));
+
+  // Facebook
+  $wp_customize->add_setting($company_link_facebook, array(
+    'default' => 'https://www.facebook.com'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $company_link_facebook_control, array(
+    'label' => 'Link to Facebook page (i.e., https://facebook.com)',
+    'section' => $company_information_section,
+    'settings' => $company_link_facebook
   )));
 }
 add_action('customize_register', 'company_information_customizer');
@@ -257,7 +270,7 @@ function photogallery_repeatable_customizer($wp_customize)
 
     // This is the name of the section that will visually display in 
     // the admin panel
-    'title' => 'Photo Gallery',
+    'title' => 'Homepage: Photo Gallery',
   ));
 
   // This is where data will be stored in the database for a field
@@ -482,3 +495,47 @@ function events_repeatable_customizer($wp_customize)
   );
 }
 add_action('customize_register', 'events_repeatable_customizer');
+
+/*************************************
+  Contact page customizer
+ **************************************/
+function contact_customizer($wp_customize)
+{
+  require 'section_vars.php';
+  require_once 'controller.php';
+
+  $wp_customize->add_section($contact_section, array(
+    'title' => 'Contact',
+  ));
+
+  // Headline text
+  $wp_customize->add_setting($contact_headline, array(
+    'default' => "Contact us!"
+  ));
+  $wp_customize->add_control($contact_headline, array(
+    'label' => 'Contact headline',
+    'section' => $contact_section,
+    'type' => 'textarea'
+  ));
+
+  // Description text
+  $wp_customize->add_setting($contact_desc, array(
+    'default' => "Call and leave a message or send an email to get more information."
+  ));
+  $wp_customize->add_control($contact_desc, array(
+    'label' => 'Contact description',
+    'section' => $contact_section,
+    'type' => 'textarea'
+  ));
+
+  // Shortcode for form
+  $wp_customize->add_setting($contact_form_shortcode, array(
+    'default' => "[shortcode goes here]"
+  ));
+  $wp_customize->add_control($contact_form_shortcode, array(
+    'label' => 'Contact form shortcode',
+    'section' => $contact_section,
+    'type' => 'textarea'
+  ));
+}
+add_action('customize_register', 'contact_customizer');
