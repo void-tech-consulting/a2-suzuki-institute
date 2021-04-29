@@ -60,6 +60,50 @@ add_action('customize_register', 'company_information_customizer');
 
 
 /*************************************
+  Site links
+ **************************************/
+function site_links_customizer($wp_customize)
+{
+  require 'section_vars.php';
+
+  $wp_customize->add_section($site_links_section, array(
+    'title' => 'Site Links',
+  ));
+
+  // Contact page
+  $wp_customize->add_setting($site_links_contact, array(
+    'default' => '/contact'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $site_links_contact_control, array(
+    'label' => 'Contact Page',
+    'section' => $site_links_section,
+    'settings' => $site_links_contact
+  )));
+
+  // Videos page
+  $wp_customize->add_setting($site_links_videos, array(
+    'default' => '/videos'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $site_links_videos_control, array(
+    'label' => 'Videos Page',
+    'section' => $site_links_section,
+    'settings' => $site_links_videos
+  )));
+
+  // Teachers page
+  $wp_customize->add_setting($site_links_teachers, array(
+    'default' => '/teachers'
+  ));
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, $site_links_teachers_control, array(
+    'label' => 'Teachers Page',
+    'section' => $site_links_section,
+    'settings' => $site_links_teachers
+  )));
+}
+add_action('customize_register', 'site_links_customizer');
+
+
+/*************************************
   Homepage customizer
  **************************************/
 function homepage_customizer($wp_customize)

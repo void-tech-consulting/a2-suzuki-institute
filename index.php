@@ -7,7 +7,7 @@ require get_template_directory() . '/inc/section_vars.php';
   <span class="secondary-header-text shadow-hard"><?php echo get_theme_mod($jumbotron_headline) ?></span>
   <p class="shadow-hard"><?php echo get_theme_mod($jumbotron_subheading) ?></p>
   <div class="vertical-spacer"></div>
-  <a href="<?php get_bloginfo('url'); ?>/contact">
+  <a href="<?php echo get_bloginfo('url'); ?><?php echo get_theme_mod($site_links_contact) ?>">
     <button>Contact</button>
   </a>
   <div class="vertical-spacer"></div>
@@ -26,7 +26,8 @@ require get_template_directory() . '/inc/section_vars.php';
         <h2>About</h2>
         <p><?php echo get_theme_mod($homepage_about) ?></p>
         <div class="vertical-spacer"></div>
-        <a href="<?php get_bloginfo('url'); ?>/teachers">
+        <a href="<?php echo get_bloginfo('url');
+                  echo get_theme_mod($site_links_teachers); ?>">
           <button class="btn-outline">Meet our teachers</button>
         </a>
       </div>
@@ -55,7 +56,8 @@ require get_template_directory() . '/inc/section_vars.php';
         <h2><?php echo get_theme_mod($homepage_videos_headline) ?></h2>
         <p><?php echo get_theme_mod($homepage_videos_description) ?></p>
         <div class="vertical-spacer"></div>
-        <a href="<?php get_bloginfo('url'); ?>/videos">
+        <a href="<?php echo get_bloginfo('url');
+                  echo get_theme_mod($site_links_videos); ?>">
           <button class="btn-outline">See all videos</button>
         </a>
       </div>

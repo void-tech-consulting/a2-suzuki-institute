@@ -60,3 +60,12 @@ $contact_section = 'contact_section';
 $contact_headline = 'contact_headline';
 $contact_desc = 'contact_desc';
 $contact_form_shortcode = 'contact_form_shortcode';
+
+// Site links
+$site_links_section = 'site_links_section';
+$site_links_contact = 'site_links_contact';
+$site_links_contact_control = 'site_links_contact_control';
+$site_links_teachers = 'site_links_teachers';
+$site_links_teachers_control = 'site_links_teachers_control';
+$site_links_videos = 'site_links_videos';
+$site_links_videos_control = 'site_links_videos_control';
