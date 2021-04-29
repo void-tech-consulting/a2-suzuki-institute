@@ -2,6 +2,7 @@
 <?php
 get_header();
 ?>
+<?php require get_template_directory() . '/inc/section_vars.php'; ?>
 
 <div class="page-container">
   <div class="page-content-container">
@@ -9,15 +10,18 @@ get_header();
 
     <div class="page-section">
       <div class="contact-form-container">
-        <?php echo do_shortcode("[forminator_form id='96']"); ?>
+        <?php
+        $shortcode = get_theme_mod($contact_form_shortcode);
+        echo do_shortcode($shortcode);
+        ?>
       </div>
 
       <div class="contact-message-container">
-        <h2 style="text-align: center">We'd love to hear from you!</h2>
-        <p style="text-align: center; width: 72%">Call and leave a message or send an email to schedule lessons and get more information.</p>
+        <h2 style="text-align: center"><?php echo get_theme_mod($contact_headline) ?></h2>
+        <p style="text-align: center; width: 72%"><?php echo get_theme_mod($contact_desc) ?></p>
         <br>
-        <p style="text-align: center">(734) 726-0171</p>
-        <p style="text-align: center">annarborsuzuki@gmail.com</p>
+        <p style="text-align: center"><?php echo get_theme_mod($company_information_phone); ?></p>
+        <p style="text-align: center"><?php echo get_theme_mod($company_information_email); ?></p>
       </div>
 
     </div>
