@@ -13,10 +13,13 @@
                 foreach ($data as $k => $f) { ?>
                     <div class="section-row">
 
-                        <?php
-                        $media = '<img src="' . esc_url(get_media_url($f['photo'])) . '" class="teacher-profile-pic" />'
-                        ?>
-                        <?php echo $media ?>
+                        <div class="teacher-profile-wrapper">
+                            <?php
+                            $media = '<img src="' . esc_url(get_media_url($f['photo'])) . '" class="teacher-profile-pic" />';
+                            echo $media;
+                            ?>
+                        </div>
+
 
                         <div class="teacher-text">
                             <h3><?php echo $f['name'] ?></h3>

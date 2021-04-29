@@ -24,7 +24,7 @@
                 <?php } ?>
             <?php } else { ?>
                 <div class="section-row">
-                    <p>No videos have been uploaded</p>
+                    <p>No videos found</p>
                 </div>
             <?php } ?>
         </div>

@@ -12,7 +12,7 @@
             $data = get_events_data($events_repeater);
             if (!empty($data)) {
                 foreach ($data as $k => $f) { ?>
-                    <div class="event-row">
+                    <div class="section-row">
                         <div class="event-responsive-row">
                             <div class="event-box">
                                 <div class="rectangle-1">
