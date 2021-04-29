@@ -324,7 +324,7 @@ input::placeholder {
 
 /* Mobile menu */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .header-main {
     position: relative;
   }
@@ -469,10 +469,6 @@ h2.page-header-text {
   padding-top: 40px;
 }
 
-.section-row > * {
-  min-width: 30%;
-}
-
 /*************************************
   Home page styles 
 **************************************/
@@ -567,6 +563,7 @@ h2.page-header-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 40px;
 }
 
 /*************************************
@@ -579,17 +576,12 @@ h2.page-header-text {
   align-items: flex-start;
   width: 50%;
   margin-right: 24px;
+  min-width: 280px;
 }
 
 /*************************************
   Events page styles 
 **************************************/
-
-.event-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
 
 .event-responsive-row {
   display: flex;
@@ -668,15 +660,37 @@ h2.page-header-text {
 
 .teacher-text {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.teacher-profile-pic {
-  height: 255px;
+.teacher-profile-wrapper {
   width: 184px;
+  height: 255px;
   margin: 0 20px 20px 0;
+}
+
+.teacher-profile-pic {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+/*************************************
+ Newsletter page styles 
+**************************************/
+.newsletter-post + .newsletter-post {
+  margin-top: 2rem;
+}
+
+.newsletter-post > p {
+  margin-bottom: 1rem;
+}
+
+.newsletter-date {
+  margin-bottom: .5rem;
+  color:rgb(176, 176, 176);
 }
 
 /*************************************
@@ -799,12 +813,17 @@ h2.page-header-text {
     margin-right: 0px;
     margin-bottom: 20px;
   }
+
+  .contact-message-container {
+    margin-top: 40px;
+    margin-left: 0;
+  }
 }
 
 /* tablet (medium width) */
 
 @media (max-width: 640px) {
-  .teacher-profile-pic {
+  .teacher-profile-wrapper {
     height: 128px;
     width: 92px;
   }
