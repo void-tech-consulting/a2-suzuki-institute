@@ -1,4 +1,4 @@
-# Wordpress Boilerplate
+# Boilerplate
 
 ## Important Files must follow exact name
 
